@@ -1,0 +1,24 @@
+.container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.header {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.comingSoon {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 3rem;
+}

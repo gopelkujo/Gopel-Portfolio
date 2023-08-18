@@ -1,0 +1,44 @@
+html,
+body {
+    background-color: rgb(237, 237, 237);
+    padding: 0;
+    margin: 0;
+    color: rgb(18, 18, 18);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    transition: 0.5s;
+}
+
+a {
+    color: rgb(5, 83, 251);
+}
+
+a:hover {
+    color: rgb(163, 24, 255);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
