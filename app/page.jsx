@@ -8,7 +8,7 @@ export default function Home() {
         <title>Gopel&apos;s Work</title>
       </Head>
       <div className={styles.container}>
-        <span className={styles.header}>
+        <span className={styles.highlight}>
           Hello world!<br />
         </span>
         <span className={styles.description}>
