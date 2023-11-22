@@ -21,3 +21,26 @@ export default function Home() {
     </>
   )
 }
+
+/* 
+ * Page Routing Note
+ *
+ * Page route based on folder in top-level folder "app".
+ * Structure: 
+ *  /app:
+ *      /contact (folder)
+ *        /page.jsx (file as contact code)
+ * Example route: localhost:3000/contact
+ * 
+*/
+
+/*
+ * Assets Note
+ * Add folder "src" in top-level folder to keep assets files
+ * Example:
+ *  /src:
+ *    /images
+ *      /image.png
+ *    /styles
+ *      /globals.css
+*/
