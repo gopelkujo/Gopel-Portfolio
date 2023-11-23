@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           </div>
           {children}
           <span className={styles.footer}>
-            Built in Next JS and deploy on Vercel, with ❤ Take a tour of this project on <a href="https://github.com/gopelkujo/Gopel-Portfolio" target="_blank" rel="noopener noreferrer">Github</a>
+            Built in Next JS and deploy on Vercel, with ❤ Take a tour of this project on <a href="https://github.com/gopelkujo/gopelkujo.com" target="_blank" rel="noopener noreferrer">Github</a>
           </span>
         </div>
       </body>
