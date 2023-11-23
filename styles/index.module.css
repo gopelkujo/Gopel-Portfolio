@@ -4,6 +4,18 @@
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profileImage{
+    width: 150px;
+    height: 250px;
+    background-image: url("../src/assets/images/gopel-sleepy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .highlight {
@@ -12,14 +24,18 @@
 }
 
 .description {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 90%;
+    margin-top: 2rem;
 }
 
 .comingSoon {
     width: 100%;
+    padding: 16px;
     position: absolute;
     text-align: center;
-    bottom: 3rem;
+    bottom: 1rem;
 }
 
 /* Responsive Template */
@@ -31,6 +47,9 @@
     .container {
         margin-left: 3rem;
         margin-right: 3rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     /* For desktop: */
@@ -40,6 +59,9 @@
     }
 
     .description {
-        font-size: 3rem;
+        font-size: 1rem;
+        text-align: justify;
+        margin-left: 2rem;
+        max-width: 50%;
     }
 }
