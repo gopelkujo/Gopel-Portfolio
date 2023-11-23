@@ -1,0 +1,110 @@
+
+
+.baseLayout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.menuContainer {
+    width: 80%;
+    margin: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, .2);
+}
+
+.menuContainer h1{
+    color: teal;
+    font-size: 1rem;
+    font-weight: normal;
+    display: none;
+}
+
+.menuContainer ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menuContainer ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menuContainer ul li a {
+    color: cornflowerblue;
+    font-size: 0.8rem;
+    display: none;
+}
+
+.menuContainer ul li img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.3rem;
+}
+
+.footer {
+    width: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.footer, .footer a {
+    font-size: 0.8rem;
+}
+
+/* Responsive Template */
+@media only screen and (min-width: 400px) {
+    /* For tablets: */
+    .menuContainer {
+        justify-content: space-between;
+    }
+    
+    .menuContainer h1 {
+        display: block;
+    }
+
+    .menuContainer ul {
+        width: auto;
+        justify-content: inherit;
+    }
+
+    .menuContainer ul li {
+        margin-left: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .menuContainer ul li a {
+        display: block;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 16px;
+        position: absolute;
+        text-align: center;
+        bottom: 1rem;
+    }
+}

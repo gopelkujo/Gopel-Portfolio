@@ -1,13 +1,13 @@
 .container {
+    width: 80%;
     margin-left: 1rem;
     margin-right: 1rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .profileImage{
@@ -18,24 +18,11 @@
     background-size: cover;
 }
 
-.highlight {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .description {
     font-size: 1rem;
     text-align: justify;
     max-width: 90%;
     margin-top: 2rem;
-}
-
-.comingSoon {
-    width: 100%;
-    padding: 16px;
-    position: absolute;
-    text-align: center;
-    bottom: 1rem;
 }
 
 /* Responsive Template */
@@ -45,17 +32,13 @@
 
 @media only screen and (min-width: 768px) {
     .container {
-        margin-left: 3rem;
-        margin-right: 3rem;
+        width: 80%;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-    }
-
-    /* For desktop: */
-    .highlight {
-        font-size: 3.5rem;
-        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
     }
 
     .description {
@@ -63,5 +46,6 @@
         text-align: justify;
         margin-left: 2rem;
         max-width: 50%;
+        margin-top: 0;
     }
 }

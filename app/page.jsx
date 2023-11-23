@@ -4,22 +4,14 @@ import gopelImage from "../src/assets/images/gopel-sleepy.png"
 import Image from "next/image"
 
 export default function Home() {
-  const description = "Hi👋🏻 My name is Nauval (a.k.a Gopel). I'am a profesional Web & Mobile Developer, but recently i do some desktop project. My passion is to translate the design into a real interface that user can use. I love design too, but i don't fit too much as a designer coz my design is based on my mood ehe✌🏻. Welcome to my portfolio! enjoy☕"
+  const description = "Hi👋🏻 My name is Nauval (a.k.a Gopel). I'am a profesional Web & Mobile Developer, but recently i do some desktop project too. My passion is to translate the design into a real interface that user can use the goods as comfortably as possible. I love design too, but i don't fit too much as a designer coz my design is based on my mood ehe✌🏻. I currently work as Mobile Developer for Javabook Indonesia onsite at East Jakarta, Indonesia. Welcome to my page! enjoy☕"
   return (
-    <>
-      <Head>
-        <title>Gopel&apos;s Work</title>
-      </Head>
-      <div className={styles.container}>
-        <div className={styles.profileImage}/>
-        <span className={styles.description}>
-          {description}
-        </span>
-      </div>
-      <span className={styles.comingSoon}>
-        Built in Next JS and deploy on Vercel, with ❤ Take a tour to this project on <a href="https://github.com/gopelkujo/Gopel-Portfolio" target="_blank" rel="noopener noreferrer">Github</a>
+    <div className={styles.container}>
+      <div className={styles.profileImage} />
+      <span className={styles.description}>
+        {description}
       </span>
-    </>
+    </div>
   )
 }
 
