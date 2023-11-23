@@ -12,6 +12,7 @@ body {
 
 a {
     color: rgb(5, 83, 251);
+    text-decoration: none;
 }
 
 a:hover {
@@ -60,13 +61,4 @@ ul {
 button {
     padding: 0.5rem 1rem;
     font-weight: bold;
-}
-
-/* Responsive Template */
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
 }
