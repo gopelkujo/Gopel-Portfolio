@@ -14,7 +14,8 @@
     width: 80%;
     margin: 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: white;
+    border: 1px solid rgb(229, 229, 229);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,13 +23,12 @@
     border-radius: 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-shadow: 5px 5px 5px rgba(128, 128, 128, .2);
 }
 
 .menuContainer h1{
-    color: teal;
+    color: rgb(12, 147, 147);
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: bold;
     display: none;
 }
 
@@ -47,9 +47,13 @@
 }
 
 .menuContainer ul li a {
-    color: cornflowerblue;
+    color: rgb(49, 115, 237);
     font-size: 0.8rem;
     display: none;
+}
+
+.menuContainer ul li a:hover {
+    color: blue;
 }
 
 .menuContainer ul li img {
