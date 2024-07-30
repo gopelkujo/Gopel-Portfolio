@@ -6,14 +6,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
 .profileImage{
-    width: 150px;
-    height: 250px;
-    background-image: url("../src/assets/images/gopel-sleepy.png");
+    width: 130px;
+    height: 130px;
+    background-image: url("../src/assets/images/memoji.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -25,6 +26,11 @@
     margin-top: 2rem;
 }
 
+.greetText {
+    font-size: 1rem;
+    max-width: 90%;
+}
+
 /* Responsive Template */
 @media only screen and (min-width: 600px) {
     /* For tablets: */
@@ -34,11 +40,17 @@
     .container {
         width: 80%;
         flex-wrap: nowrap;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         position: absolute;
         top: 50%;
         transform: translate(0%, -50%);
+    }
+
+    .profileImage {
+        width: 320px;
+        height: 320px;
     }
 
     .description {
@@ -47,5 +59,9 @@
         margin-left: 2rem;
         max-width: 50%;
         margin-top: 0;
+    }
+    
+    .greetText {
+        font-size: 2.5rem;
     }
 }
