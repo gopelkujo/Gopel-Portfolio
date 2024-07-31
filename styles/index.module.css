@@ -1,19 +1,30 @@
-.container {
-    width: 80%;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.pageContainer {
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.greetContainer {
+    margin: auto;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
 .profileImage{
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     background-image: url("../src/assets/images/memoji.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,9 +38,49 @@
 }
 
 .greetText {
-    font-size: 1rem;
-    max-width: 90%;
+    font-size: 1.5rem;
+    /* max-width: 80%; */
 }
+
+.takeATourText {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: grey;
+    font-weight: 100;
+}
+
+.greetAndTourTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceBox {
+    width: 100%;
+    padding: 1rem;
+}
+
+.subTitle {
+    font-size: 1rem;
+}
+
+.experienceBox ul {
+    margin-top: 1rem;
+}
+
+.experienceBox ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgb(50, 50, 50);
+}
+
+.experienceBox ul li:before {
+    content: ">";
+    margin-right: 0.5rem;
+    color: blue;
+  }
+
+/* TODO: Implement responsive from big to small */
 
 /* Responsive Template */
 @media only screen and (min-width: 600px) {
@@ -37,20 +88,17 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .container {
+    /* .greetContainer {
         width: 80%;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 50%;
-        transform: translate(0%, -50%);
     }
 
     .profileImage {
-        width: 320px;
-        height: 320px;
+        width: 130px;
+        height: 130px;
     }
 
     .description {
@@ -62,6 +110,6 @@
     }
     
     .greetText {
-        font-size: 2.5rem;
-    }
+        font-size: 1.5rem;
+    } */
 }

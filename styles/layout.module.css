@@ -1,18 +1,20 @@
 
 
 .baseLayout {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    margin: auto;
 }
 
 .menuContainer {
-    width: 80%;
-    margin: 1rem;
+    width: 100%;
+    /* margin: 1rem; */
     padding: 0.5rem 1rem 0.5rem 1rem;
     background-color: white;
     border: 1px solid rgb(229, 229, 229);
@@ -73,9 +75,14 @@
     font-size: 0.8rem;
 }
 
+/* TODO: Implement responsive from big to small */
+
 /* Responsive Template */
 @media only screen and (min-width: 400px) {
     /* For tablets: */
+    .baseLayout {
+        width: 80%;
+    }
     .menuContainer {
         justify-content: space-between;
     }
@@ -96,19 +103,26 @@
 
 @media only screen and (min-width: 600px) {
     /* For tablets: */
+    .baseLayout {
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
+    .baseLayout {
+        width: 50%;
+    }
     .menuContainer ul li a {
         display: block;
     }
 
     .footer {
         width: 100%;
-        padding: 16px;
-        position: absolute;
+        padding: 1rem;
         text-align: center;
         bottom: 1rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 }
