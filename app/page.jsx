@@ -1,7 +1,4 @@
-import Head from "next/head"
 import styles from "../styles/index.module.css"
-import gopelImage from "../src/assets/images/gopel-sleepy.png"
-import Image from "next/image"
 
 export default function Home() {
   const greet = "Hello, nice to meet you. I am Gopel!";
