@@ -5,6 +5,11 @@ import linkedinIco from '../src/assets/images/linkedin-ico.png'
 import githubIco from '../src/assets/images/github-ico.png'
 import xIco from '../src/assets/images/x-ico.png'
 
+export const metadata = {
+  title: "gopelkujo",
+  description: "my professional journey."
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
