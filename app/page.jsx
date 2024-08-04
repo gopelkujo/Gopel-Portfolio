@@ -4,13 +4,39 @@ import gopelImage from "../src/assets/images/gopel-sleepy.png"
 import Image from "next/image"
 
 export default function Home() {
-  const description = "Hi👋🏻 My name is Nauval (a.k.a Gopel). I'am a profesional Web & Mobile Developer, but recently i do some desktop project too. My passion is to translate the design into a real interface that user can use the goods as comfortably as possible. I love design too, but i don't fit too much as a designer coz my design is based on my mood ehe✌🏻. I currently work as Mobile Developer for Javabook Indonesia onsite at East Jakarta, Indonesia. Welcome to my page! enjoy☕"
+  const greet = "Hello, nice to meet you. I am Gopel!";
+  const takeATour = "Let's take a look about my professional experience...";
   return (
-    <div className={styles.container}>
-      <div className={styles.profileImage} />
-      <span className={styles.description}>
-        {description}
-      </span>
+    <div className={styles.pageContainer}>
+      <div className={styles.greetContainer}>
+        <div className={styles.greetAndTourTextContainer}>
+          <span className={styles.greetText}>
+            {greet}
+          </span>
+          <span className={styles.takeATourText}>
+            {takeATour}
+          </span>
+        </div>
+        <div className={styles.profileImage} />
+      </div>
+      <div className={styles.experienceBox}>
+        <span className={styles.subTitle}>
+          Work Experience
+        </span>
+        <ul>
+          <li>Mobile Developer - Javabook Indonesia (July 2022 - now)</li>
+        </ul>
+      </div>
+      <div className={styles.experienceBox}>
+        <span className={styles.subTitle}>
+          Project
+        </span>
+        <ul>
+          <li>Company Profile Web Development, PT Multi Piranti Jaya (Jan 2023 - Mar 2023)</li>
+          <li>Inventory System Web Development, SINBADA: Sistem Inventarisasi Barang Daerah (Nov 2022 - Dec 2022)</li>
+          <li>Inventory System Web Development, SIINVENT: Sistem Informasi Inventarisasi Dinas (Apr 2022 - Jun 2022)</li>
+        </ul>
+      </div>
     </div>
   )
 }

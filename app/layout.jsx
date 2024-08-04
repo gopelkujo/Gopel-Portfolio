@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className={styles.baseLayout}>
           <div className={styles.menuContainer}>
-            <h1>gopelkujo.app</h1>
+            <h1>gopelkujo</h1>
             <ul>
               <li><img src={linkedinIco.src} alt="Linked In"/><a href="https://www.linkedin.com/in/gopel-kujo/" target="_blank" rel="noopener noreferrer">/gopel-kujo</a></li>
               <li><img src={githubIco.src} alt="Github" /><a href="https://github.com/gopelkujo" target="_blank" rel="noopener noreferrer">/gopelkujo</a></li>
