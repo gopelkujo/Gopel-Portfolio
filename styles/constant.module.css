@@ -1,0 +1,39 @@
+.p-16 {
+  padding: 16px;
+}
+
+.p-24 {
+    padding: 24px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pt-24 {
+  padding-top: 24px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.pl-16 {
+  padding-left: 16px;
+}
+
+.pl-24 {
+  padding-left: 24px;
+}
+
+.pr-16 {
+  padding-right: 16px;
+}
+
+.pr-24 {
+  padding-right: 24px;
+}
