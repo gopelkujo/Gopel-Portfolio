@@ -68,16 +68,65 @@
 }
 
 .experienceBox ul li {
-  margin-bottom: 0.5rem;
+  position: relative; /* Menambahkan posisi relatif untuk mengatur padding */
+  margin-bottom: 1rem;
   font-size: 0.8rem;
   font-weight: 300;
   color: rgb(50, 50, 50);
+  padding-left: 1.2rem; /* Menambahkan padding untuk mengimbangi simbol */
+  text-indent: -0.0rem; /* Menambahkan indentasi negatif untuk mengimbangi padding */
 }
 
 .experienceBox ul li:before {
   content: ">";
+  position: absolute; /* Menjadikan simbol dalam posisi absolut */
+  left: 0; /* Menempatkan simbol pada tepi kiri */
   margin-right: 0.5rem;
   color: blue;
+}
+
+.experienceBox ul li h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.experienceBox ul li h1 h2 {
+  display: inline;
+  font-weight: normal;
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.tools ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.tools ul li {
+  list-style: none;
+  border: 2px solid rgb(49, 115, 237);
+  border-radius: 10px;
+  padding: 4px 8px 4px 8px;
+  margin-right: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(49, 115, 237);
+  transition: 0.3s;
+  cursor: default;
+}
+
+.tools ul li:hover {
+  background-color: rgb(49, 115, 237);
+  color: white;
+}
+
+/* /tools */
+.tools ul li::before {
+  display: none;
 }
 
 /* TODO: Implement responsive from big to small */

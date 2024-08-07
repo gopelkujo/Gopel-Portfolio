@@ -18,10 +18,46 @@ export default function Home() {
       </div>
       <div className={styles.experienceBox}>
         <span className={styles.subTitle}>
+          Education
+        </span>
+        <ul>
+          <li>
+            <h1>Polytechnic State of Bandung <h2>(2019 - 2023)</h2></h1>
+            <i>Teknik Jurusan Komputer dan Informatika - D4 Teknik Informatika</i><br/>
+            With the final project title “Development of Web-Based Book Sales Prediction 
+            Application on E-Commerce Markets at PT Periplus Bookindo”
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>Python</li>
+                <li>Mysql</li>
+                <li>Machine Learning</li>
+                <li>Multiple Linear Regression</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className={styles.experienceBox}>
+        <span className={styles.subTitle}>
           Work Experience
         </span>
         <ul>
-          <li>Mobile Developer - Javabook Indonesia (July 2022 - now)</li>
+          <li>
+            <h1>Javabook Indonesia <h2>(July 2022 - now)</h2></h1>
+            <i>Mobile Developer</i><br/>
+            Working on develop and maintaining Periplus Apps (Book Store Mobile Application) and Periplus Human Capital (Human Resource Mobile Application) 
+            based on Android and iOS using Flutter.
+            <div className={styles.tools}>
+              <ul>
+                <li>Flutter</li>
+                <li>iOS</li>
+                <li>Android</li>
+                <li>Android Studio</li>
+                <li>Xcode</li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <div className={styles.experienceBox}>
@@ -29,9 +65,51 @@ export default function Home() {
           Project
         </span>
         <ul>
-          <li>Company Profile Web Development, PT Multi Piranti Jaya (Jan 2023 - Mar 2023)</li>
-          <li>Inventory System Web Development, SINBADA: Sistem Inventarisasi Barang Daerah (Nov 2022 - Dec 2022)</li>
-          <li>Inventory System Web Development, SIINVENT: Sistem Informasi Inventarisasi Dinas (Apr 2022 - Jun 2022)</li>
+          <li>
+            <h1>Company Profile Web Development PT Multi Piranti Jaya <h2>(Jan 2023 - Mar 2023)</h2></h1>
+            <i>Project Manager, UI/UX, Frontend Developer</i> <br />
+            Develop a company profile website that shows all of the information about the company.
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>Headless Wordpress</li>
+                <li>Cpanel</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h1>Inventory System Web Development, SINBADA <h2>(Nov 2022 - Dec 2022)</h2></h1>
+            <i>Frontend Developer</i><br />
+            Develop an inventory system for Administrasi Niaga’s final year student project NAMED SINBADA (Sistem Inventarisasi Barang Daerah).
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>Postgre</li>
+                <li>Ruby</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h1>Inventory System Web Development, SIINVENT <h2>(Apr 2022 - Jun 2022)</h2></h1>
+            <i>Frontend Developer</i><br />
+            Develop an inventory system for Administrasi Niaga’s final year student project NAMED SIINVENT (Sistem Informasi Inventarisasi Dinas).
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>MySQL</li>
+                <li>Express</li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
