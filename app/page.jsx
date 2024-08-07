@@ -26,6 +26,15 @@ export default function Home() {
             <i>Mobile Developer</i><br/>
             Working on develop and maintaining Periplus Apps (Book Store Mobile Application) and Periplus Human Capital (Human Resource Mobile Application) 
             based on Android and iOS using Flutter.
+            <div className={styles.tools}>
+              <ul>
+                <li>Flutter</li>
+                <li>iOS</li>
+                <li>Android</li>
+                <li>Android Studio</li>
+                <li>Xcode</li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -38,16 +47,46 @@ export default function Home() {
             <h1>Company Profile Web Development PT Multi Piranti Jaya <h2>(Jan 2023 - Mar 2023)</h2></h1>
             <i>Project Manager, UI/UX, Frontend Developer</i> <br />
             Develop a company profile website that shows all of the information about the company.
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>Headless Wordpress</li>
+                <li>Cpanel</li>
+              </ul>
+            </div>
           </li>
           <li>
             <h1>Inventory System Web Development, SINBADA <h2>(Nov 2022 - Dec 2022)</h2></h1>
             <i>Frontend Developer</i><br />
             Develop an inventory system for Administrasi Niaga’s final year student project NAMED SINBADA (Sistem Inventarisasi Barang Daerah).
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>Postgre</li>
+                <li>Ruby</li>
+              </ul>
+            </div>
           </li>
           <li>
             <h1>Inventory System Web Development, SIINVENT <h2>(Apr 2022 - Jun 2022)</h2></h1>
             <i>Frontend Developer</i><br />
             Develop an inventory system for Administrasi Niaga’s final year student project NAMED SIINVENT (Sistem Informasi Inventarisasi Dinas).
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>MUI</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>MySQL</li>
+                <li>Express</li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>

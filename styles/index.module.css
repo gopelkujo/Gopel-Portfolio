@@ -98,6 +98,29 @@
   font-size: 0.8rem;
 }
 
+.tools ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tools ul li {
+  list-style: none;
+  border: 2px solid rgb(49, 115, 237);
+  border-radius: 10px;
+  padding: 4px 8px 4px 8px;
+  margin-right: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(49, 115, 237);
+}
+
+/* /tools */
+.tools ul li::before {
+  display: none;
+}
+
 /* TODO: Implement responsive from big to small */
 
 /* RESPONSIVE */
