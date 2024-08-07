@@ -18,6 +18,28 @@ export default function Home() {
       </div>
       <div className={styles.experienceBox}>
         <span className={styles.subTitle}>
+          Education
+        </span>
+        <ul>
+          <li>
+            <h1>Polytechnic State of Bandung <h2>(2019 - 2023)</h2></h1>
+            <i>Teknik Jurusan Komputer dan Informatika - D4 Teknik Informatika</i><br/>
+            With the final project title “Development of Web-Based Book Sales Prediction 
+            Application on E-Commerce Markets at PT Periplus Bookindo”
+            <div className={styles.tools}>
+              <ul>
+                <li>React</li>
+                <li>Python</li>
+                <li>Mysql</li>
+                <li>Machine Learning</li>
+                <li>Multiple Linear Regression</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className={styles.experienceBox}>
+        <span className={styles.subTitle}>
           Work Experience
         </span>
         <ul>
