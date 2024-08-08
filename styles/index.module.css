@@ -88,14 +88,22 @@
 .experienceBox ul li h1 {
   font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline;
 }
 
-.experienceBox ul li h1 h2 {
+.experienceBox ul li h2 {
   display: inline;
   font-weight: normal;
   color: grey;
   font-size: 0.8rem;
+}
+
+.experienceTitle {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .tools ul {
