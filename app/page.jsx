@@ -126,6 +126,15 @@ export default function Home() {
           </li>
         </ul>
       </div>
+      <div className={styles.aboutMeBox}>
+        <h1>A little bit about me</h1>
+        <p>
+          I love turning beautiful design into an application that user will comfortably use. 
+          I like to make the best of my work, deliver a beautiful application, clean code, easy maintain, and clean documentation. 
+          New opportunity are welcome!
+        </p>
+        <footer>— Gopel (nauval) 2024</footer>
+      </div>
     </div>
   )
 }

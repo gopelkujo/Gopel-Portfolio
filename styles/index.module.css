@@ -79,7 +79,7 @@
   font-weight: 300;
   color: rgb(50, 50, 50);
   padding-left: 1.2rem; /* Menambahkan padding untuk mengimbangi simbol */
-  text-indent: -0.0rem; /* Menambahkan indentasi negatif untuk mengimbangi padding */
+  text-indent: -0rem; /* Menambahkan indentasi negatif untuk mengimbangi padding */
 }
 
 .experienceBox ul li:before {
@@ -142,21 +142,84 @@
   display: none;
 }
 
+.aboutMeBox {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to right,
+    #ff3b3c,
+    #fb1d53,
+    #f10069,
+    #e2007d,
+    #cd0090,
+    #db0288,
+    #e81080,
+    #f31f77,
+    #ff6257,
+    #ff9c45,
+    #fad052,
+    #e1ff85
+  );
+  background-size: 360% 180%;
+  color: white;
+  animation: gradient 10s ease infinite;
+}
+
+.aboutMeBox h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.aboutMeBox p {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.aboutMeBox footer {
+  margin-top: 2rem;
+  text-align: end;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* TODO: Implement responsive from big to small */
 
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {
-    .greetText {
-      font-size: 1rem;
-    }
-
-    .takeATourText {
-        font-size: 0.8rem;
-    }
-
-    .profileImage {
-        width: 100px;
-        height: 100px;
-    }
+  .greetText {
+    font-size: 1rem;
   }
-  
+
+  .takeATourText {
+    font-size: 0.8rem;
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .aboutMeBox h1 {
+    font-size: 0.8rem;
+  }
+
+  .aboutMeBox p {
+    font-size: 0.6rem;
+  }
+
+  .aboutMeBox footer {
+    font-size: 0.6rem;
+    margin-top: 1rem;
+  }
+}
