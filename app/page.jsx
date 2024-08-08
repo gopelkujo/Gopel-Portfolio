@@ -22,7 +22,10 @@ export default function Home() {
         </span>
         <ul>
           <li>
-            <h1>Polytechnic State of Bandung <h2>(2019 - 2023)</h2></h1>
+            <div className={styles.experienceTitle}>
+              <h1>Polytechnic State of Bandung </h1>
+              <h2>(2019 - 2023)</h2>
+            </div>
             <i>Teknik Jurusan Komputer dan Informatika - D4 Teknik Informatika</i><br/>
             With the final project title “Development of Web-Based Book Sales Prediction 
             Application on E-Commerce Markets at PT Periplus Bookindo”
@@ -44,7 +47,10 @@ export default function Home() {
         </span>
         <ul>
           <li>
-            <h1>Javabook Indonesia <h2>(July 2022 - now)</h2></h1>
+            <div className={styles.experienceTitle}>
+              <h1>Javabook Indonesia</h1>
+              <h2>(July 2022 - now)</h2>
+            </div>
             <i>Mobile Developer</i><br/>
             Working on develop and maintaining Periplus Apps (Book Store Mobile Application) and Periplus Human Capital (Human Resource Mobile Application) 
             based on Android and iOS using Flutter.
@@ -66,7 +72,9 @@ export default function Home() {
         </span>
         <ul>
           <li>
-            <h1>Company Profile Web Development PT Multi Piranti Jaya <h2>(Jan 2023 - Mar 2023)</h2></h1>
+            <div className={styles.experienceTitle}>
+              <h1>Company Profile Web Development PT Multi Piranti Jaya</h1><h2>(Jan 2023 - Mar 2023)</h2>
+            </div>
             <i>Project Manager, UI/UX, Frontend Developer</i> <br />
             Develop a company profile website that shows all of the information about the company.
             <div className={styles.tools}>
@@ -81,7 +89,10 @@ export default function Home() {
             </div>
           </li>
           <li>
-            <h1>Inventory System Web Development, SINBADA <h2>(Nov 2022 - Dec 2022)</h2></h1>
+            <div className={styles.experienceTitle}>
+              <h1>Inventory System Web Development, SINBADA</h1>
+              <h2>(Nov 2022 - Dec 2022)</h2>
+            </div>
             <i>Frontend Developer</i><br />
             Develop an inventory system for Administrasi Niaga’s final year student project NAMED SINBADA (Sistem Inventarisasi Barang Daerah).
             <div className={styles.tools}>
@@ -96,7 +107,10 @@ export default function Home() {
             </div>
           </li>
           <li>
-            <h1>Inventory System Web Development, SIINVENT <h2>(Apr 2022 - Jun 2022)</h2></h1>
+            <div className={styles.experienceTitle}>
+              <h1>Inventory System Web Development, SIINVENT</h1>
+              <h2>(Apr 2022 - Jun 2022)</h2>
+            </div>
             <i>Frontend Developer</i><br />
             Develop an inventory system for Administrasi Niaga’s final year student project NAMED SIINVENT (Sistem Informasi Inventarisasi Dinas).
             <div className={styles.tools}>
@@ -111,6 +125,15 @@ export default function Home() {
             </div>
           </li>
         </ul>
+      </div>
+      <div className={styles.aboutMeBox}>
+        <h1>A little bit about me</h1>
+        <p>
+          I love turning beautiful design into an application that user will comfortably use. 
+          I like to make the best of my work, deliver a beautiful application, clean code, easy maintain, and clean documentation. 
+          New opportunity are welcome!
+        </p>
+        <footer>— Gopel (nauval) 2024</footer>
       </div>
     </div>
   )
