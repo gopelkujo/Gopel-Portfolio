@@ -61,7 +61,7 @@
 
 .experienceBox {
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .subTitle {
@@ -143,6 +143,7 @@
 }
 
 .aboutMeBox {
+  margin-top: 2rem;
   padding: 1rem;
   border-radius: 1rem;
   background-image: linear-gradient(
