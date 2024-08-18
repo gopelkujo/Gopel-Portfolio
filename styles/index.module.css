@@ -181,6 +181,53 @@
   text-align: end;
 }
 
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projectBox {
+  width: 13rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column; 
+  border: 1px solid rgb(180, 180, 180);
+  padding: 1rem;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.projectBox:hover {
+  background-color: rgb(230, 230, 230);
+
+}
+
+.projectBox h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.projectBox p {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.projectBox div {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.projectBox li {
+  margin-bottom: 0.2rem !important;
+  margin-right: 0.2rem !important;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
