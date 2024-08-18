@@ -8,13 +8,15 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   margin: auto;
+  margin-top: 2rem;
 }
 
 .menuContainer {
-  width: 100%;
-  /* margin: 1rem; */
+  position: fixed;
+  top: 1rem;
+  width: 43rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgb(229, 229, 229);
   display: flex;
   flex-direction: row;
@@ -23,6 +25,9 @@
   border-radius: 10px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .menuContainer h1 {
@@ -40,29 +45,34 @@
 
 .menuContainer ul li {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   margin-left: 1rem;
 }
 
 .menuContainer ul li a {
-  color: rgb(49, 115, 237);
-  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.menuContainer ul li a:hover {
+.menuContainer ul li a span {
+  color: rgb(49, 115, 237);
+  font-size: 0.8rem;
+  transition: 0.3s;
+  font-weight: 300;
+}
+
+.menuContainer ul li a span:hover {
   color: blue;
 }
 
-.menuContainer ul li img {
+.menuContainer ul li a img {
   width: 25px;
   height: 25px;
   margin-right: 0.3rem;
 }
 
 .footer {
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   margin-top: 1rem;
   text-align: center;
@@ -79,12 +89,11 @@
     width: 95%;
   }
 
-  .menuContainer ul li a {
-    display: none;
+  .menuContainer {
+    width: 95%;
   }
 
-  .footer,
-  .footer a {
-    font-size: 0.6rem;
+  .menuContainer ul li span {
+    display: none;
   }
 }
