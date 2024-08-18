@@ -102,7 +102,7 @@ export default function Home() {
       </div>
       <div className={styles.quoteBox}>
         <p>
-        "When you arise in the morning, think of what a precious privilege it is to be alive - to breathe, to think, to enjoy, to love."
+        &quot;When you arise in the morning, think of what a precious privilege it is to be alive - to breathe, to think, to enjoy, to love.&quot;
         </p>
         <footer>— Aurelius, Marcus</footer>
       </div>
