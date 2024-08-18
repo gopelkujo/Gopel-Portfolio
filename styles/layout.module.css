@@ -12,6 +12,7 @@
 
 .menuContainer {
   width: 100%;
+  /* margin: 1rem; */
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: white;
   border: 1px solid rgb(229, 229, 229);
@@ -48,8 +49,6 @@
 .menuContainer ul li a {
   color: rgb(49, 115, 237);
   font-size: 0.8rem;
-  transition: 0.3s;
-  font-weight: 300;
 }
 
 .menuContainer ul li a:hover {
