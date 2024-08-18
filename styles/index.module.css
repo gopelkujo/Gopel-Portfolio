@@ -144,7 +144,7 @@
   display: none;
 }
 
-.aboutMeBox {
+.quoteBox {
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -168,19 +168,13 @@
   animation: gradient 10s ease infinite;
 }
 
-.aboutMeBox h1 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.aboutMeBox p {
+.quoteBox p {
   font-size: 0.8rem;
   font-weight: normal;
 }
 
-.aboutMeBox footer {
-  margin-top: 2rem;
+.quoteBox footer {
+  margin-top: 1rem;
   text-align: end;
 }
 
@@ -288,16 +282,17 @@
     width: 100%;
   }
 
-  .aboutMeBox h1 {
+  .quoteBox {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .quoteBox p {
     font-size: 0.8rem;
   }
 
-  .aboutMeBox p {
-    font-size: 0.6rem;
-  }
-
-  .aboutMeBox footer {
-    font-size: 0.6rem;
-    margin-top: 1rem;
+  .quoteBox footer {
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }

@@ -100,15 +100,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.aboutMeBox}>
-        <h1>A little bit about me</h1>
+      <div className={styles.quoteBox}>
         <p>
-          I love turning beautiful design into an application that user will
-          comfortably use. I like to make the best of my work, deliver a
-          beautiful application, clean code, easy maintain, and clean
-          documentation. New opportunity are welcome!
+        "When you arise in the morning, think of what a precious privilege it is to be alive - to breathe, to think, to enjoy, to love."
         </p>
-        <footer>— Gopel (nauval) 2024</footer>
+        <footer>— Aurelius, Marcus</footer>
       </div>
     </div>
   );
