@@ -61,7 +61,7 @@
 
 .experienceBox {
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .subTitle {
@@ -73,19 +73,19 @@
 }
 
 .experienceBox ul li {
-  position: relative; /* Menambahkan posisi relatif untuk mengatur padding */
+  position: relative; 
   margin-bottom: 1rem;
   font-size: 0.8rem;
   font-weight: 300;
   color: rgb(50, 50, 50);
-  padding-left: 1.2rem; /* Menambahkan padding untuk mengimbangi simbol */
-  text-indent: -0rem; /* Menambahkan indentasi negatif untuk mengimbangi padding */
+  padding-left: 1.2rem; 
+  text-indent: -0rem; 
 }
 
 .experienceBox ul li:before {
   content: ">";
-  position: absolute; /* Menjadikan simbol dalam posisi absolut */
-  left: 0; /* Menempatkan simbol pada tepi kiri */
+  position: absolute; 
+  left: 0; 
   margin-right: 0.5rem;
   color: blue;
 }
@@ -143,6 +143,7 @@
 }
 
 .aboutMeBox {
+  margin-top: 2rem;
   padding: 1rem;
   border-radius: 1rem;
   background-image: linear-gradient(
@@ -179,6 +180,53 @@
 .aboutMeBox footer {
   margin-top: 2rem;
   text-align: end;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projectBox {
+  width: 13rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column; 
+  border: 1px solid rgb(180, 180, 180);
+  padding: 1rem;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.projectBox:hover {
+  background-color: rgb(230, 230, 230);
+
+}
+
+.projectBox h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.projectBox p {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.projectBox div {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.projectBox li {
+  margin-bottom: 0.2rem !important;
+  margin-right: 0.2rem !important;
 }
 
 @keyframes gradient {
