@@ -11,6 +11,7 @@
 .greetContainer {
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -44,19 +45,20 @@
 
 .greetText {
   font-size: 1.5rem;
-  /* max-width: 80%; */
+  max-width: 80%;
 }
 
 .takeATourText {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
   color: rgb(85, 85, 85);
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .greetAndTourTextContainer {
   display: flex;
   flex-direction: column;
+  max-width: 80%;
 }
 
 .experienceBox {
@@ -190,6 +192,7 @@
 }
 
 .projectBox {
+  margin-top: 1rem;
   width: 13rem;
   height: 8rem;
   border-radius: 0.5rem;
@@ -243,19 +246,42 @@
 
 /* TODO: Implement responsive from big to small */
 
-/* RESPONSIVE */
+/* Medium */
 @media only screen and (max-width: 768px) {
+  .greetContainer {
+    flex-wrap: wrap-reverse;
+    justify-content: stretch;
+  }
+
+  .profileImage {
+    margin: auto;
+  }
+
+  .greetAndTourTextContainer {
+    max-width: 100%;
+  }
+
   .greetText {
     font-size: 1rem;
+    max-width: 100%;
   }
 
   .takeATourText {
     font-size: 0.8rem;
   }
 
+  .tools li {
+    margin-right: 0.4rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+
   .profileImage {
     width: 100px;
     height: 100px;
+  }
+
+  .projectContainer {
+    justify-content: space-evenly;
   }
 
   .aboutMeBox h1 {
