@@ -284,6 +284,10 @@
     justify-content: space-evenly;
   }
 
+  .projectBox {
+    width: 100%;
+  }
+
   .aboutMeBox h1 {
     font-size: 0.8rem;
   }
