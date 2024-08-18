@@ -224,6 +224,16 @@
 .projectBox li {
   margin-bottom: 0.2rem !important;
   margin-right: 0.2rem !important;
+  background-color: rgb(49, 115, 237);
+  border: none;
+  color: white !important;
+}
+
+.projectBox li:hover {
+  /* background-color: rgb(49, 115, 237); */
+  /* border: none; */
+  color: rgb(49, 115, 237) !important;
+  background-color: transparent !important;
 }
 
 @keyframes gradient {
