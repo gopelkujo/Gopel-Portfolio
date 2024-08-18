@@ -72,7 +72,7 @@
 }
 
 .footer {
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   margin-top: 1rem;
   text-align: center;
@@ -95,10 +95,5 @@
 
   .menuContainer ul li span {
     display: none;
-  }
-
-  .footer,
-  .footer a {
-    font-size: 0.6rem;
   }
 }
