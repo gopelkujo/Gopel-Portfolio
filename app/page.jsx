@@ -1,7 +1,4 @@
 import styles from "../styles/index.module.css";
-import mpj1 from "../src/assets/images/mpj_1.png";
-import sinbada1 from "../src/assets/images/sinbada_1.png";
-import siinvent1 from "../src/assets/images/siinvent_1.png";
 
 export default function Home() {
   const greet = "Hello, nice to meet you. I am Gopel!";
@@ -102,20 +99,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          {/* <div className={styles.projectBox}>
-            <span>SINBADA</span>
-            <img
-              src={sinbada1.src}
-              alt=""
-            />
-          </div>
-          <div className={styles.projectBox}>
-            <span>SIINVENT</span>
-            <img
-              src={siinvent1.src}
-              alt=""
-            />
-          </div> */}
         </div>
       </div>
       <div className={styles.aboutMeBox}>
