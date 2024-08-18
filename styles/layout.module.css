@@ -27,6 +27,7 @@
   -webkit-box-sizing: border-box;
   z-index: 1;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .menuContainer h1 {
@@ -44,24 +45,27 @@
 
 .menuContainer ul li {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   margin-left: 1rem;
 }
 
 .menuContainer ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuContainer ul li a span {
   color: rgb(49, 115, 237);
   font-size: 0.8rem;
   transition: 0.3s;
   font-weight: 300;
 }
 
-.menuContainer ul li a:hover {
+.menuContainer ul li a span:hover {
   color: blue;
 }
 
-.menuContainer ul li img {
+.menuContainer ul li a img {
   width: 25px;
   height: 25px;
   margin-right: 0.3rem;
@@ -89,7 +93,7 @@
     width: 95%;
   }
 
-  .menuContainer ul li a {
+  .menuContainer ul li span {
     display: none;
   }
 
