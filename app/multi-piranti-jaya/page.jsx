@@ -34,7 +34,7 @@ export default function Mpj() {
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.toolsContainer}>
-          <Link href="https://react.dev/">
+          <Link href="https://react.dev/" target="_blank">
             <div className={styles.tools}>
               <img
                 src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
