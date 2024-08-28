@@ -70,9 +70,7 @@ export default function Home() {
         <span className={styles.subTitle}>Project</span>
         <br />
         <div className={styles.projectContainer}>
-          <Link
-            href='/multi-piranti-jaya'
-          >
+          <Link href="/multi-piranti-jaya">
             <div className={styles.projectBox}>
               <h1>Multi Piranti Jaya</h1>
               <p>Company profile website based on ReactJS and Wordpress CMS.</p>
@@ -84,28 +82,30 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <Link href='/sinbada'>
-          <div className={styles.projectBox}>
-            <h1>SINBADA</h1>
-            <p>Inventory system website based on ReactJS and Ruby.</p>
-            <div className={styles.tools}>
-              <ul>
-                <li>ReactJS</li>
-                <li>MUI</li>
-              </ul>
+          <Link href="/sinbada">
+            <div className={styles.projectBox}>
+              <h1>SINBADA</h1>
+              <p>Inventory system website based on ReactJS and Ruby.</p>
+              <div className={styles.tools}>
+                <ul>
+                  <li>ReactJS</li>
+                  <li>MUI</li>
+                </ul>
+              </div>
             </div>
-          </div>
           </Link>
-          <div className={styles.projectBox}>
-            <h1>SIINVENT</h1>
-            <p>Inventory system website based on ReactJS and ExpressJS.</p>
-            <div className={styles.tools}>
-              <ul>
-                <li>ReactJS</li>
-                <li>MUI</li>
-              </ul>
+          <Link href="/siinvent">
+            <div className={styles.projectBox}>
+              <h1>SIINVENT</h1>
+              <p>Inventory system website based on ReactJS and ExpressJS.</p>
+              <div className={styles.tools}>
+                <ul>
+                  <li>ReactJS</li>
+                  <li>MUI</li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className={styles.quoteBox}>
