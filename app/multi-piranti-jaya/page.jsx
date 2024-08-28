@@ -9,6 +9,7 @@ import mpj6 from "../../src/assets/images/mpj/6.png";
 import mpj7 from "../../src/assets/images/mpj/7.png";
 import "@splidejs/react-splide/css";
 import styles from "../../styles/project.module.css";
+import Link from "next/link";
 
 export default function Mpj() {
   let images = [mpj1, mpj2, mpj3, mpj4, mpj5, mpj6, mpj7];
@@ -32,6 +33,44 @@ export default function Mpj() {
         <Splide aria-label="My Favorite Images">{carouselImages}</Splide>{" "}
       </div>
       <div className={styles.contentContainer}>
+        <div className={styles.toolsContainer}>
+          <Link href="https://react.dev/">
+            <div className={styles.tools}>
+              <img
+                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                alt="react"
+              />
+              ReactJS
+            </div>
+          </Link>
+          <Link href="https://mui.com/" target="_blank">
+            <div className={styles.tools}>
+              <img
+                src="https://seeklogo.com/images/M/mui-logo-56F171E991-seeklogo.com.png"
+                alt="MaterialUI"
+              />
+              MaterialUI
+            </div>
+          </Link>
+          <Link href="https://wordpress.org/" target="_blank">
+            <div className={styles.tools}>
+              <img
+                src="https://clipart-library.com/new_gallery/2-28115_wordpress-logo-png-transparent-wordpress-logo-png.png"
+                alt="WordpressCMS"
+              />
+              WordpressCMS
+            </div>
+          </Link>
+          <Link href="https://cpanel.net/" target="_blank">
+            <div className={styles.tools}>
+              <img
+                src="https://i.ibb.co.com/K7P6Ksf/Png-Item-259878.png"
+                alt="Cpanel"
+              />
+              Cpanel
+            </div>
+          </Link>
+        </div>
         <br />
         Multi Piranti Jaya approached us to revamp their outdated company
         profile website.
@@ -53,14 +92,6 @@ export default function Mpj() {
         Throughout the project, we maintained close communication with Multi
         Piranti Jaya, providing regular updates and ensuring that all
         specifications and requirements were met at each stage of development.
-        <br />
-        <br />
-        <h1>Tools</h1>
-        <ul>
-          <li>React JS</li>
-          <li>MUI</li>
-          <li>Wordpress CMS</li>
-        </ul>
       </div>
     </div>
   );
