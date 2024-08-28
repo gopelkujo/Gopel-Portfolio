@@ -80,9 +80,7 @@ export default function Mpj() {
         <p>
           <br />
           Multi Piranti Jaya approached us to revamp their outdated company
-          profile website.
-          <br />
-          Their existing website had not been updated for some time, and they
+          profile website. Their existing website had not been updated for some time, and they
           requested a more modern and contemporary design that meets
           today&rsquo;s standards.
           <br />
