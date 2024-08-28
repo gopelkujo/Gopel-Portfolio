@@ -7,6 +7,10 @@ import mpj4 from "../../src/assets/images/mpj/4.png";
 import mpj5 from "../../src/assets/images/mpj/5.png";
 import mpj6 from "../../src/assets/images/mpj/6.png";
 import mpj7 from "../../src/assets/images/mpj/7.png";
+import reactLogo from "../../src/assets/images/reactjs.png";
+import muiLogo from "../../src/assets/images/mui.png";
+import wordpressLogo from "../../src/assets/images/wordpress.png";
+import cpanelLogo from "../../src/assets/images/cpanel.png";
 import "@splidejs/react-splide/css";
 import styles from "../../styles/project.module.css";
 import Link from "next/link";
@@ -39,7 +43,7 @@ export default function Mpj() {
           <Link href="https://react.dev/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                src={reactLogo.src}
                 alt="react"
               />
               ReactJS
@@ -48,7 +52,7 @@ export default function Mpj() {
           <Link href="https://mui.com/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://seeklogo.com/images/M/mui-logo-56F171E991-seeklogo.com.png"
+                src={muiLogo.src}
                 alt="MaterialUI"
               />
               MaterialUI
@@ -57,7 +61,7 @@ export default function Mpj() {
           <Link href="https://wordpress.org/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://clipart-library.com/new_gallery/2-28115_wordpress-logo-png-transparent-wordpress-logo-png.png"
+                src={wordpressLogo.src}
                 alt="WordpressCMS"
               />
               WordpressCMS
@@ -66,7 +70,7 @@ export default function Mpj() {
           <Link href="https://cpanel.net/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://i.ibb.co.com/K7P6Ksf/Png-Item-259878.png"
+                src={cpanelLogo.src}
                 alt="Cpanel"
               />
               Cpanel

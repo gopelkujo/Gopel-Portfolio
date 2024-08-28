@@ -3,6 +3,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import sinbada1 from "../../src/assets/images/sinbada/1.png";
 import sinbada2 from "../../src/assets/images/sinbada/2.png";
 import sinbada3 from "../../src/assets/images/sinbada/3.png";
+import reactLogo from "../../src/assets/images/reactjs.png";
+import muiLogo from "../../src/assets/images/mui.png";
+import rubyOnRailsLogo from "../../src/assets/images/rubyonrails.png";
 import "@splidejs/react-splide/css";
 import styles from "../../styles/project.module.css";
 import Link from "next/link";
@@ -35,7 +38,7 @@ export default function Sinbada() {
           <Link href="https://react.dev/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                src={reactLogo.src}
                 alt="react"
               />
               ReactJS
@@ -44,7 +47,7 @@ export default function Sinbada() {
           <Link href="https://mui.com/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://seeklogo.com/images/M/mui-logo-56F171E991-seeklogo.com.png"
+                src={muiLogo.src}
                 alt="MaterialUI"
               />
               MaterialUI
@@ -53,7 +56,7 @@ export default function Sinbada() {
           <Link href="https://rubyonrails.org/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://i.ibb.co.com/y83ywD2/62c48bbdd884e8c372162223.png"
+                src={rubyOnRailsLogo.src}
                 alt="RubyOnRails"
               />
               RubyOnRails

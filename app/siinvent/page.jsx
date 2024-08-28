@@ -2,6 +2,9 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import siinvent1 from "../../src/assets/images/siinvent/1.png";
 import siinvent2 from "../../src/assets/images/siinvent/2.png";
+import reactLogo from "../../src/assets/images/reactjs.png";
+import muiLogo from "../../src/assets/images/mui.png";
+import expressLogo from "../../src/assets/images/expressjs.png"
 import "@splidejs/react-splide/css";
 import styles from "../../styles/project.module.css";
 import Link from "next/link";
@@ -34,7 +37,7 @@ export default function Siinvent() {
           <Link href="https://react.dev/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                src={reactLogo.src}
                 alt="react"
               />
               ReactJS
@@ -43,7 +46,7 @@ export default function Siinvent() {
           <Link href="https://mui.com/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://seeklogo.com/images/M/mui-logo-56F171E991-seeklogo.com.png"
+                src={muiLogo.src}
                 alt="MaterialUI"
               />
               MaterialUI
@@ -52,7 +55,7 @@ export default function Siinvent() {
           <Link href="https://expressjs.com/" target="_blank">
             <div className={styles.tools}>
               <img
-                src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png"
+                src={expressLogo.src}
                 alt="ExpressJS"
               />
               ExpressJS
