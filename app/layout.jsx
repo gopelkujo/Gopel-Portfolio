@@ -4,6 +4,7 @@ import styles from "../styles/layout.module.css";
 import linkedinIco from "../src/assets/images/linkedin-ico.png";
 import githubIco from "../src/assets/images/github-ico.png";
 import xIco from "../src/assets/images/x-ico.png";
+import Link from 'next/link';
 
 export const metadata = {
   title: "gopelkujo",
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className={styles.baseLayout}>
           <div className={styles.menuContainer}>
-            <h1>gopelkujo</h1>
+            <Link href='/'><h1>gopelkujo</h1></Link>
             <ul>
               <li>
                 <a
