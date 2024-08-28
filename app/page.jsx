@@ -84,6 +84,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
+          <Link href='/sinbada'>
           <div className={styles.projectBox}>
             <h1>SINBADA</h1>
             <p>Inventory system website based on ReactJS and Ruby.</p>
@@ -94,6 +95,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          </Link>
           <div className={styles.projectBox}>
             <h1>SIINVENT</h1>
             <p>Inventory system website based on ReactJS and ExpressJS.</p>

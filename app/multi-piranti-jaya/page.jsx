@@ -25,7 +25,7 @@ export default function Mpj() {
       <br />
       <br />
       <div className={styles.contentContainer}>
-        <h1>Multi Piranti Jaya Company Profile Website Development</h1>
+        <h1 className={styles.title}>Multi Piranti Jaya Company Profile Website Development</h1>
       </div>
       <br />
       <br />
