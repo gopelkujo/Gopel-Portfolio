@@ -1,0 +1,10 @@
+.carouselContainer {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px #ccc;
+    overflow: hidden;
+}
+
+.contentContainer {
+    width: 85%;
+    margin: auto;
+}

@@ -1,8 +1,10 @@
 import styles from "../styles/index.module.css";
+import Link from "next/link";
 
 export default function Home() {
   const greet = "Hello, nice to meet you. I am Gopel!";
-  const takeATour = "Hey! I'm a front-end web and mobile developer with a passion for turning beautiful designs into user-friendly apps. I really enjoy coding because, let's be real, it just looks cool to me, haha. When I'm not busy with code, you'll probably find me out exploring nature on my motorcycle ─ it's the perfect escape!";
+  const takeATour =
+    "Hey! I'm a front-end web and mobile developer with a passion for turning beautiful designs into user-friendly apps. I really enjoy coding because, let's be real, it just looks cool to me, haha. When I'm not busy with code, you'll probably find me out exploring nature on my motorcycle ─ it's the perfect escape!";
   return (
     <div className={styles.pageContainer}>
       <div className={styles.greetContainer}>
@@ -68,16 +70,20 @@ export default function Home() {
         <span className={styles.subTitle}>Project</span>
         <br />
         <div className={styles.projectContainer}>
-          <div className={styles.projectBox}>
-            <h1>Multi Piranti Jaya</h1>
-            <p>Company profile website based on ReactJS and Wordpress CMS.</p>
-            <div className={styles.tools}>
-              <ul>
-                <li>ReactJS</li>
-                <li>MUI</li>
-              </ul>
+          <Link
+            href='/multi-piranti-jaya'
+          >
+            <div className={styles.projectBox}>
+              <h1>Multi Piranti Jaya</h1>
+              <p>Company profile website based on ReactJS and Wordpress CMS.</p>
+              <div className={styles.tools}>
+                <ul>
+                  <li>ReactJS</li>
+                  <li>MUI</li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </Link>
           <div className={styles.projectBox}>
             <h1>SINBADA</h1>
             <p>Inventory system website based on ReactJS and Ruby.</p>
@@ -102,7 +108,9 @@ export default function Home() {
       </div>
       <div className={styles.quoteBox}>
         <p>
-        &quot;When you arise in the morning, think of what a precious privilege it is to be alive - to breathe, to think, to enjoy, to love.&quot;
+          &quot;When you arise in the morning, think of what a precious
+          privilege it is to be alive - to breathe, to think, to enjoy, to
+          love.&quot;
         </p>
         <footer>— Aurelius, Marcus</footer>
       </div>
