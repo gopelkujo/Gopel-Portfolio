@@ -19,6 +19,7 @@
 .contentContainer p {
     font-size: 1rem;
     color: rgb(85, 85, 85);
+    font-weight: 300;
 }
 
 .toolsContainer {
