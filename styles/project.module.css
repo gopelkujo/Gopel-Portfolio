@@ -16,6 +16,11 @@
   margin: auto;
 }
 
+.contentContainer p {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+}
+
 .toolsContainer {
   margin-top: 1rem;
   display: flex;
@@ -54,4 +59,38 @@
   margin-right: 0.5rem;
   border-radius: 0.8rem;
   background-color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contentContainer {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .toolsContainer a {
+        font-size: 0.5rem;
+    }
+
+    .toolsContainer {
+        justify-content: flex-start;
+    }
+
+    .tools {
+        margin-right: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .tools img {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-right: 0.4rem;
+    }
+
+    .contentContainer p {
+        font-size: 0.8rem;
+    }
 }

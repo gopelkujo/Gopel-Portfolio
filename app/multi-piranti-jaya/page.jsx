@@ -25,7 +25,9 @@ export default function Mpj() {
       <br />
       <br />
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Multi Piranti Jaya Company Profile Website Development</h1>
+        <h1 className={styles.title}>
+          Multi Piranti Jaya Company Profile Website Development
+        </h1>
       </div>
       <br />
       <br />
@@ -71,27 +73,29 @@ export default function Mpj() {
             </div>
           </Link>
         </div>
-        <br />
-        Multi Piranti Jaya approached us to revamp their outdated company
-        profile website.
-        <br />
-        Their existing website had not been updated for some time, and they
-        requested a more modern and contemporary design that meets today&rsquo;s
-        standards.
-        <br />
-        <br />
-        We were tasked with creating a new, responsive website using React.js to
-        build a dynamic user interface, and Material-UI (MUI) to ensure a
-        consistent and visually appealing design. We integrated WordPress CMS to
-        allow for easy content management, enabling Multi Piranti Jaya to
-        regularly update their site&rsquo;s information. Hosting and management
-        of the website are handled via cPanel, providing full control over
-        server operations.
-        <br />
-        <br />
-        Throughout the project, we maintained close communication with Multi
-        Piranti Jaya, providing regular updates and ensuring that all
-        specifications and requirements were met at each stage of development.
+        <p>
+          <br />
+          Multi Piranti Jaya approached us to revamp their outdated company
+          profile website.
+          <br />
+          Their existing website had not been updated for some time, and they
+          requested a more modern and contemporary design that meets
+          today&rsquo;s standards.
+          <br />
+          <br />
+          We were tasked with creating a new, responsive website using React.js
+          to build a dynamic user interface, and Material-UI (MUI) to ensure a
+          consistent and visually appealing design. We integrated WordPress CMS
+          to allow for easy content management, enabling Multi Piranti Jaya to
+          regularly update their site&rsquo;s information. Hosting and
+          management of the website are handled via cPanel, providing full
+          control over server operations.
+          <br />
+          <br />
+          Throughout the project, we maintained close communication with Multi
+          Piranti Jaya, providing regular updates and ensuring that all
+          specifications and requirements were met at each stage of development.
+        </p>
       </div>
     </div>
   );

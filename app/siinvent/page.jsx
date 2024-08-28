@@ -20,7 +20,9 @@ export default function Siinvent() {
       <br />
       <br />
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>SIINVENT: Website Based Inventory System</h1>
+        <h1 className={styles.title}>
+          SIINVENT: Website Based Inventory System
+        </h1>
       </div>
       <br />
       <br />
@@ -57,26 +59,28 @@ export default function Siinvent() {
             </div>
           </Link>
         </div>
-        <br /> We have been tasked with developing an inventory management
-        system website for an institution.
-        <br />
-        This system is designed to streamline the management of items within the
-        organization, covering key functions such as procurement, borrowing,
-        transfer, and disposal of items.
-        <br />
-        <br />
-        The website is being built using React.js for a responsive and dynamic
-        user interface, along with Material-UI (MUI) to ensure a consistent and
-        modern design. On the backend, Express JS is employed to handle the
-        server-side logic, ensuring robust and efficient processing of inventory
-        data.
-        <br />
-        <br />
-        This system will enable the institution to effectively manage its
-        inventory, providing a centralized platform to monitor and control the
-        lifecycle of all items, from acquisition to disposal.
-        <br />
-        <br />
+        <p>
+          <br /> We have been tasked with developing an inventory management
+          system website for an institution.
+          <br />
+          This system is designed to streamline the management of items within
+          the organization, covering key functions such as procurement,
+          borrowing, transfer, and disposal of items.
+          <br />
+          <br />
+          The website is being built using React.js for a responsive and dynamic
+          user interface, along with Material-UI (MUI) to ensure a consistent
+          and modern design. On the backend, Express JS is employed to handle
+          the server-side logic, ensuring robust and efficient processing of
+          inventory data.
+          <br />
+          <br />
+          This system will enable the institution to effectively manage its
+          inventory, providing a centralized platform to monitor and control the
+          lifecycle of all items, from acquisition to disposal.
+          <br />
+          <br />
+        </p>
       </div>
     </div>
   );
