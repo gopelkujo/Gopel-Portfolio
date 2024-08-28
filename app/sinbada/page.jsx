@@ -7,7 +7,7 @@ import "@splidejs/react-splide/css";
 import styles from "../../styles/project.module.css";
 import Link from "next/link";
 
-export default function Mpj() {
+export default function Sinbada() {
   let images = [sinbada1, sinbada2, sinbada3];
 
   const carouselImages = images.map((val) => (
@@ -48,7 +48,7 @@ export default function Mpj() {
               MaterialUI
             </div>
           </Link>
-          <Link href="https://wordpress.org/" target="_blank">
+          <Link href="https://rubyonrails.org/" target="_blank">
             <div className={styles.tools}>
               <img
                 src="https://i.ibb.co.com/y83ywD2/62c48bbdd884e8c372162223.png"
