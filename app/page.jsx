@@ -1,5 +1,15 @@
 import styles from "../styles/index.module.css";
 import Link from "next/link";
+import Image from "next/image";
+
+// Import PHC images
+import PhcIcon from "../src/assets/images/phc/icon.jpg";
+import PhcLogin from "../src/assets/images/phc/login.png";
+import PhcHome from "../src/assets/images/phc/home.png";
+import PhcAttendance from "../src/assets/images/phc/attendance.png";
+import PhcAttendanceForm from "../src/assets/images/phc/attendance_form.png";
+import PhcNotification from "../src/assets/images/phc/notification.png";
+import PhcProfile from "../src/assets/images/phc/profile.png";
 
 export default function Home() {
   const greet = "Hello, nice to meet you. I am Gopel!";
@@ -11,6 +21,15 @@ export default function Home() {
     code, you'll probably find me out exploring nature on my motorcycle ─ it's \
     the perfect escape!";
 
+  const phcImages = [
+    { img: PhcLogin, alt: "login" },
+    { img: PhcHome, alt: "home" },
+    { img: PhcAttendance, alt: "attendance" },
+    { img: PhcAttendanceForm, alt: "attendance form" },
+    { img: PhcNotification, alt: "notification" },
+    { img: PhcProfile, alt: "profile" },
+  ];
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.greetContainer}>
@@ -20,7 +39,25 @@ export default function Home() {
         </div>
         <div className={styles.profileImage} />
       </div>
-      <div className={styles.experienceBox}>
+      <div className={styles.worksBox}>
+        <div className={styles.worksBoxtitle}>
+          <Image src={PhcIcon} alt="logo" />
+          <div className={styles.worksBoxtitleDesc}>
+            <h1>Periplus Human Capital</h1>
+            <p>Published for internal company on Play Store and App Store</p>
+            <h2>
+              An application for employee management, mainly for employee
+              attendance.
+            </h2>
+          </div>
+        </div>
+        <div className={styles.worksBoxImages}>
+          {phcImages.map((item, index) => {
+            return <Image key={index} src={item.img} alt={item.alt} />;
+          })}
+        </div>
+      </div>
+      {/* <div className={styles.experienceBox}>
         <span className={styles.subTitle}>Education</span>
         <ul>
           <li>
@@ -71,7 +108,7 @@ export default function Home() {
             </div>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div className={styles.experienceBox}>
         <span className={styles.subTitle}>Project</span>
         <br />
