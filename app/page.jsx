@@ -3,8 +3,14 @@ import Link from "next/link";
 
 export default function Home() {
   const greet = "Hello, nice to meet you. I am Gopel!";
+
   const takeATour =
-    "Hey! I'm a front-end web and mobile developer with a passion for turning beautiful designs into user-friendly apps. I really enjoy coding because, let's be real, it just looks cool to me, haha. When I'm not busy with code, you'll probably find me out exploring nature on my motorcycle ─ it's the perfect escape!";
+    "Hey! I'm a front-end web and mobile developer with a passion for turning \
+    beautiful designs into user-friendly apps. I really enjoy coding because, \
+    let's be real, it just looks cool to me, haha. When I'm not busy with \
+    code, you'll probably find me out exploring nature on my motorcycle ─ it's \
+    the perfect escape!";
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.greetContainer}>
