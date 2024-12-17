@@ -12,9 +12,9 @@ import PhcNotification from "../src/assets/images/phc/notification.png";
 import PhcProfile from "../src/assets/images/phc/profile.png";
 
 export default function Home() {
-  const greet = "Hello, nice to meet you. I am Gopel!";
+  const greetingText = "Hello, nice to meet you. I am Gopel!";
 
-  const takeATour =
+  const introductionText =
     "Hey! I'm a front-end web and mobile developer with a passion for turning \
     beautiful designs into user-friendly apps. I really enjoy coding because, \
     let's be real, it just looks cool to me, haha. When I'm not busy with \
@@ -22,20 +22,20 @@ export default function Home() {
     the perfect escape!";
 
   const phcImages = [
-    { img: PhcLogin, alt: "login" },
-    { img: PhcHome, alt: "home" },
-    { img: PhcAttendance, alt: "attendance" },
-    { img: PhcAttendanceForm, alt: "attendance form" },
-    { img: PhcNotification, alt: "notification" },
-    { img: PhcProfile, alt: "profile" },
+    { img: PhcLogin, alt: "Login Page" },
+    { img: PhcHome, alt: "Home Page" },
+    { img: PhcAttendance, alt: "Attendance Page" },
+    { img: PhcAttendanceForm, alt: "Attendance Form Page" },
+    { img: PhcNotification, alt: "Notification Page" },
+    { img: PhcProfile, alt: "Profile Page" },
   ];
 
   return (
     <div className={styles.pageContainer}>
       <div className={styles.greetContainer}>
         <div className={styles.greetAndTourTextContainer}>
-          <span className={styles.greetText}>{greet}</span>
-          <span className={styles.takeATourText}>{takeATour}</span>
+          <span className={styles.greetText}>{greetingText}</span>
+          <span className={styles.takeATourText}>{introductionText}</span>
         </div>
         <div className={styles.profileImage} />
       </div>
