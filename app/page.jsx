@@ -12,7 +12,17 @@ import PhcNotification from "../src/assets/images/phc/notification.png";
 import PhcProfile from "../src/assets/images/phc/profile.png";
 import AppStoreBadge from "../src/assets/images/app_store_badge.svg";
 import GooglePlayBadge from "../src/assets/images/google_play_badge.png";
-import Flutter from "../src/assets/images/flutter.png";
+
+// Import Periplus Apps images
+import PPlusIcon from "../src/assets/images/periplus_apps/icon.jpeg";
+import PPlusHome from "../src/assets/images/periplus_apps/home.png";
+import PPlusCategory from "../src/assets/images/periplus_apps/category.png";
+import PPlusLogin from "../src/assets/images/periplus_apps/login.png";
+import PPlusProfile from "../src/assets/images/periplus_apps/profile.png";
+import PPlusBook from "../src/assets/images/periplus_apps/book.png";
+import PPlusCart from "../src/assets/images/periplus_apps/cart.png";
+import PPlusPayment from "../src/assets/images/periplus_apps/payment.png";
+import PPlusTransaction from "../src/assets/images/periplus_apps/transaction.png";
 
 export default function Home() {
   const greetingText = "Hello, nice to meet you. I am Gopel!";
@@ -31,6 +41,17 @@ export default function Home() {
     { img: PhcAttendanceForm, alt: "Attendance Form Page" },
     { img: PhcNotification, alt: "Notification Page" },
     { img: PhcProfile, alt: "Profile Page" },
+  ];
+
+  const pplusImages = [
+    { img: PPlusHome, alt: "Home" },
+    { img: PPlusCategory, alt: "Category" },
+    { img: PPlusLogin, alt: "Login" },
+    { img: PPlusProfile, alt: "Profile" },
+    { img: PPlusBook, alt: "Book" },
+    { img: PPlusCart, alt: "Cart" },
+    { img: PPlusPayment, alt: "Payment" },
+    { img: PPlusTransaction, alt: "Transaction" },
   ];
 
   function BuildHeader() {
@@ -54,62 +75,77 @@ export default function Home() {
     techs,
     images,
   }) {
-    return <div className={styles.worksBox}>
-      <div className={styles.worksBoxtitle}>
-        <Image src={icon} alt="logo" className={styles.worksBoxIcon} />
-        <div className={styles.worksBoxtitleDesc}>
-          <h1>{title}</h1>
-          <h2>{description}</h2>
+    return (
+      <div className={styles.worksBox}>
+        <div className={styles.worksBoxtitle}>
+          <Image src={icon} alt="logo" className={styles.worksBoxIcon} />
+          <div className={styles.worksBoxtitleDesc}>
+            <h1>{title}</h1>
+            <h2>{description}</h2>
+          </div>
+          {appstoreLink == null && playstoreLink == null ? null : (
+            <div className={styles.worksBoxStore}>
+              {appstoreLink ? (
+                <Link
+                  href={appstoreLink}
+                  target="_blank"
+                  style={{ marginRight: "0.5rem" }}
+                >
+                  <Image
+                    src={AppStoreBadge}
+                    alt="Google Play Store Icon"
+                    width={100}
+                    height={500}
+                  />
+                </Link>
+              ) : null}
+              {playstoreLink != null ? (
+                <Link href={playstoreLink} target="_blank">
+                  <Image
+                    src={GooglePlayBadge}
+                    alt="Google Play Store Icon"
+                    width={115}
+                    height={100}
+                  />
+                </Link>
+              ) : null}
+            </div>
+          )}
         </div>
-        <div className={styles.worksBoxStore}>
-          <Link
-            href={appstoreLink}
-            target="_blank"
-            style={{ marginRight: "0.5rem" }}
-          >
-            <Image
-              src={AppStoreBadge}
-              alt="Google Play Store Icon"
-              width={100}
-              height={500}
-            />
-          </Link>
-          <Link href={playstoreLink} target="_blank">
-            <Image
-              src={GooglePlayBadge}
-              alt="Google Play Store Icon"
-              width={115}
-              height={100}
-            />
-          </Link>
+        <div className={styles.worksBoxTech}>
+          <ul>
+            {techs.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+          </ul>
         </div>
-      </div>
-      <div className={styles.worksBoxTech}>
-        <ul>
-          {techs.map((item, index) => {
-            return <li key={index}>{item}</li>;
+        <div className={styles.worksBoxImages}>
+          {images.map((item, index) => {
+            return <Image key={index} src={item.img} alt={item.alt} />;
           })}
-        </ul>
+        </div>
       </div>
-      <div className={styles.worksBoxImages}>
-        {images.map((item, index) => {
-          return <Image key={index} src={item.img} alt={item.alt} />;
-        })}
-      </div>
-    </div>;
+    );
   }
 
   return (
     <div className={styles.pageContainer}>
       <BuildHeader />
       <BuildWorks
+        icon={PPlusIcon}
+        title="Periplus"
+        description="Periplus online bookstore, 10k+ total downloads."
+        appstoreLink="https://apps.apple.com/id/app/periplus/id6444208499"
+        playstoreLink="https://play.google.com/store/apps/details?id=com.bookindo.periplus.periplus&hl=en"
+        techs={["Figma, Flutter, Firebase, Midtrans"]}
+        images={pplusImages}
+      />
+      <BuildWorks
         icon={PhcIcon}
         title="Periplus Human Capital"
         description="An application for employee management, mainly for employee
-              attendance."
-        appstoreLink=""
-        playstoreLink=""
-        techs={["Figma, Flutter, Firebase"]}
+              attendance. Published privately on App Store and Play Store."
+        techs={["Figma, Flutter, Firebase, Geolocation"]}
         images={phcImages}
       />
       {/* <div className={styles.experienceBox}>

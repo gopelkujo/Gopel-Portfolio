@@ -93,6 +93,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   color: #484848;
+  margin-right: 1rem;
+  box-sizing: border-box;
 }
 
 .worksBoxtitleDesc h1 {
@@ -112,6 +114,7 @@
 }
 
 .worksBoxStore {
+  min-width: 220px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -120,6 +123,8 @@
 }
 
 .worksBoxStore img {
+  min-width: 100px;
+  height: 34px;
   transition: 0.2s;
 }
 
