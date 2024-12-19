@@ -10,6 +10,9 @@ import PhcAttendance from "../src/assets/images/phc/attendance.png";
 import PhcAttendanceForm from "../src/assets/images/phc/attendance_form.png";
 import PhcNotification from "../src/assets/images/phc/notification.png";
 import PhcProfile from "../src/assets/images/phc/profile.png";
+import AppStoreBadge from "../src/assets/images/app_store_badge.svg";
+import GooglePlayBadge from "../src/assets/images/google_play_badge.png";
+import Flutter from "../src/assets/images/flutter.png";
 
 export default function Home() {
   const greetingText = "Hello, nice to meet you. I am Gopel!";
@@ -30,8 +33,8 @@ export default function Home() {
     { img: PhcProfile, alt: "Profile Page" },
   ];
 
-  return (
-    <div className={styles.pageContainer}>
+  function BuildHeader() {
+    return (
       <div className={styles.greetContainer}>
         <div className={styles.greetAndTourTextContainer}>
           <span className={styles.greetText}>{greetingText}</span>
@@ -39,24 +42,76 @@ export default function Home() {
         </div>
         <div className={styles.profileImage} />
       </div>
-      <div className={styles.worksBox}>
-        <div className={styles.worksBoxtitle}>
-          <Image src={PhcIcon} alt="logo" />
-          <div className={styles.worksBoxtitleDesc}>
-            <h1>Periplus Human Capital</h1>
-            <p>Published for internal company on Play Store and App Store</p>
-            <h2>
-              An application for employee management, mainly for employee
-              attendance.
-            </h2>
-          </div>
+    );
+  }
+
+  function BuildWorks({
+    icon,
+    title,
+    description,
+    appstoreLink,
+    playstoreLink,
+    techs,
+    images,
+  }) {
+    return <div className={styles.worksBox}>
+      <div className={styles.worksBoxtitle}>
+        <Image src={icon} alt="logo" className={styles.worksBoxIcon} />
+        <div className={styles.worksBoxtitleDesc}>
+          <h1>{title}</h1>
+          <h2>{description}</h2>
         </div>
-        <div className={styles.worksBoxImages}>
-          {phcImages.map((item, index) => {
-            return <Image key={index} src={item.img} alt={item.alt} />;
-          })}
+        <div className={styles.worksBoxStore}>
+          <Link
+            href={appstoreLink}
+            target="_blank"
+            style={{ marginRight: "0.5rem" }}
+          >
+            <Image
+              src={AppStoreBadge}
+              alt="Google Play Store Icon"
+              width={100}
+              height={500}
+            />
+          </Link>
+          <Link href={playstoreLink} target="_blank">
+            <Image
+              src={GooglePlayBadge}
+              alt="Google Play Store Icon"
+              width={115}
+              height={100}
+            />
+          </Link>
         </div>
       </div>
+      <div className={styles.worksBoxTech}>
+        <ul>
+          {techs.map((item, index) => {
+            return <li key={index}>{item}</li>;
+          })}
+        </ul>
+      </div>
+      <div className={styles.worksBoxImages}>
+        {images.map((item, index) => {
+          return <Image key={index} src={item.img} alt={item.alt} />;
+        })}
+      </div>
+    </div>;
+  }
+
+  return (
+    <div className={styles.pageContainer}>
+      <BuildHeader />
+      <BuildWorks
+        icon={PhcIcon}
+        title="Periplus Human Capital"
+        description="An application for employee management, mainly for employee
+              attendance."
+        appstoreLink=""
+        playstoreLink=""
+        techs={["Figma, Flutter, Firebase"]}
+        images={phcImages}
+      />
       {/* <div className={styles.experienceBox}>
         <span className={styles.subTitle}>Education</span>
         <ul>
