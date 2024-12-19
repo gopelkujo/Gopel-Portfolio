@@ -24,6 +24,18 @@ import PPlusCart from "../src/assets/images/periplus_apps/cart.png";
 import PPlusPayment from "../src/assets/images/periplus_apps/payment.png";
 import PPlusTransaction from "../src/assets/images/periplus_apps/transaction.png";
 
+// Import Multi Piranti Jaya images
+import MpjIcon from "../src/assets/images/mpj2/icon.png";
+import MpjHome1 from "../src/assets/images/mpj2/home_1.png";
+import MpjHome2 from "../src/assets/images/mpj2/home_2.png";
+import MpjHome3 from "../src/assets/images/mpj2/home_3.png";
+import MpjHome4 from "../src/assets/images/mpj2/home_4.png";
+import MpjHome5 from "../src/assets/images/mpj2/home_5.png";
+import MpjAbout from "../src/assets/images/mpj2/about.png";
+import MpjActivity from "../src/assets/images/mpj2/activity.png";
+import MpjService from "../src/assets/images/mpj2/service.png";
+import MpjContactUs from "../src/assets/images/mpj2/contact_us.png";
+
 export default function Home() {
   const greetingText = "Hello, nice to meet you. I am Gopel!";
 
@@ -54,6 +66,18 @@ export default function Home() {
     { img: PPlusTransaction, alt: "Transaction" },
   ];
 
+  const mpjImages = [
+    { img: MpjHome1, alt: "Home 1" },
+    { img: MpjHome2, alt: "Home 2" },
+    { img: MpjHome3, alt: "Home 3" },
+    { img: MpjHome4, alt: "Home 4" },
+    { img: MpjHome5, alt: "Home 5" },
+    { img: MpjAbout, alt: "About" },
+    { img: MpjActivity, alt: "Activity" },
+    { img: MpjService, alt: "Service" },
+    { img: MpjContactUs, alt: "Contact Us" },
+  ];
+
   function BuildHeader() {
     return (
       <div className={styles.greetContainer}>
@@ -72,6 +96,7 @@ export default function Home() {
     description,
     appstoreLink,
     playstoreLink,
+    websiteLink,
     techs,
     images,
   }) {
@@ -83,7 +108,9 @@ export default function Home() {
             <h1>{title}</h1>
             <h2>{description}</h2>
           </div>
-          {appstoreLink == null && playstoreLink == null ? null : (
+          {appstoreLink == null &&
+          playstoreLink == null &&
+          websiteLink == null ? null : (
             <div className={styles.worksBoxStore}>
               {appstoreLink ? (
                 <Link
@@ -106,7 +133,17 @@ export default function Home() {
                     alt="Google Play Store Icon"
                     width={115}
                     height={100}
+                    loading="lazy"
                   />
+                </Link>
+              ) : null}
+              {websiteLink != null ? (
+                <Link
+                  href={websiteLink}
+                  target="_blank"
+                  className={styles.visitWebsiteBox}
+                >
+                  Visit Website
                 </Link>
               ) : null}
             </div>
@@ -147,6 +184,14 @@ export default function Home() {
               attendance. Published privately on App Store and Play Store."
         techs={["Figma, Flutter, Firebase, Geolocation"]}
         images={phcImages}
+      />
+      <BuildWorks
+        icon={MpjIcon}
+        title="Multi Piranti Jaya"
+        description="Profile company website of Multi Piranti Jaya."
+        websiteLink="https://multipirantijaya.com/"
+        techs={["React JS, MUI, Wordpress, Javascript"]}
+        images={mpjImages}
       />
       {/* <div className={styles.experienceBox}>
         <span className={styles.subTitle}>Education</span>
