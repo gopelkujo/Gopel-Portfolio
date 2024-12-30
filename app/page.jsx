@@ -212,9 +212,14 @@ export default function Home() {
     );
   }
 
+  function BuildSelectedWork() {
+    return <div className={styles.selectedWork}>Selected Work</div>;
+  }
+
   return (
     <div className={styles.pageContainer}>
       <BuildHeader />
+      <BuildSelectedWork />
       <BuildWorks
         icon={PPlusIcon}
         title="Periplus"

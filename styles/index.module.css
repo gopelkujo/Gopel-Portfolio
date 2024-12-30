@@ -61,6 +61,17 @@
   max-width: 80%;
 }
 
+.selectedWork {
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  margin-top: 5rem;
+  font-weight: 100;
+  font-size: larger;
+  color: #909090;
+  text-align: center;
+}
+
 .worksBox {
   padding: 0 1rem 0 1rem;
   margin-bottom: 3rem;
@@ -355,7 +366,7 @@
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(180, 180, 180);
+  border: 1px solid #b4b4b4;
   padding: 1rem;
   position: relative;
   transition: 0.3s;
@@ -389,18 +400,12 @@
 }
 
 .projectBox li {
+  padding: 0 !important;
   margin-bottom: 0.2rem !important;
-  margin-right: 0.2rem !important;
-  background-color: rgb(49, 115, 237);
-  border: none;
-  color: white !important;
-}
-
-.projectBox li:hover {
-  /* background-color: rgb(49, 115, 237); */
-  /* border: none; */
-  color: rgb(49, 115, 237) !important;
-  background-color: transparent !important;
+  margin-right: 0.4rem !important;
+  color: #909090 !important;
+  font-weight: 300 !important;
+  border: none !important;
 }
 
 @keyframes gradient {
