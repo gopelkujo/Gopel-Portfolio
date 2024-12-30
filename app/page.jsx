@@ -36,6 +36,15 @@ import MpjActivity from "../src/assets/images/mpj2/activity.png";
 import MpjService from "../src/assets/images/mpj2/service.png";
 import MpjContactUs from "../src/assets/images/mpj2/contact_us.png";
 
+// Import SINBADA images
+import Sinbada from "../src/assets/images/sinbada/1.png";
+
+// Import SIINVENT images
+import Siinvent from "../src/assets/images/siinvent/1.png";
+
+// Import GORAS images
+import Goras from "../src/assets/images/goras/goras_main.png";
+
 export default function Home() {
   const greetingText = "Hello, nice to meet you. I am Gopel!";
 
@@ -99,6 +108,7 @@ export default function Home() {
     websiteLink,
     techs,
     images,
+    isImageWide = false,
   }) {
     return (
       <div className={styles.worksBox}>
@@ -158,7 +168,16 @@ export default function Home() {
         </div>
         <div className={styles.worksBoxImages}>
           {images.map((item, index) => {
-            return <Image key={index} src={item.img} alt={item.alt} />;
+            return (
+              <Image
+                key={index}
+                src={item.img}
+                alt={item.alt}
+                className={
+                  isImageWide ? styles.worksBoxWideImg : styles.worksBoxLongImg
+                }
+              />
+            );
           })}
         </div>
       </div>
@@ -166,19 +185,18 @@ export default function Home() {
   }
 
   function BuildOtherWorks() {
-    function BuildItem({ url, title, desc, stacks }) {
+    function BuildItem({ img, url, title, desc, stacks }) {
       return (
-        <Link href={url}>
+        <Link href={url} target="_blank">
           <div className={styles.projectBox}>
+            <Image src={img.url} alt={img.alt} loading="lazy" />
             <h1>{title}</h1>
             <p>{desc}</p>
-            <div className={styles.tools}>
-              <ul>
-                {stacks.map((item, index) => {
-                  return <li key={index}>{item}</li>;
-                })}
-              </ul>
-            </div>
+            <ul>
+              {stacks.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
           </div>
         </Link>
       );
@@ -190,19 +208,22 @@ export default function Home() {
         <br />
         <div className={styles.projectContainer}>
           <BuildItem
-            url="/sinbada"
+            img={{ url: Sinbada, alt: "test" }}
+            url="https://github.com/SekelompokOrangKuat/PROJECTCUAN/tree/frontend"
             title="SINBADA"
             desc="Inventory system website based on ReactJS and Ruby."
-            stacks={["ReactJS", "MUI"]}
+            stacks={["ReactJS", "MUI", "Javascript"]}
           />
           <BuildItem
-            url="/siinvent"
+            img={{ url: Siinvent, alt: "test" }}
+            url="https://github.com/SekelompokOrangKuat/ProjectInventaris/tree/dev"
             title="SIINVENT"
             desc="Inventory system website based on ReactJS and ExpressJS."
-            stacks={["ReactJS", "MUI"]}
+            stacks={["ReactJS", "MUI", "Javascript"]}
           />
           <BuildItem
-            url="#"
+            img={{ url: Goras, alt: "test" }}
+            url="https://github.com/gopelkujo/gorasproject"
             title="Goras Ludo Games"
             desc="My team project at first year in collage. Goras Ludo Games is a board game that is similar to playing snakes and ladders."
             stacks={["C"]}
@@ -244,6 +265,7 @@ export default function Home() {
         websiteLink="https://multipirantijaya.com/"
         techs={["React JS, MUI, Wordpress, Javascript"]}
         images={mpjImages}
+        isImageWide={true}
       />
       <BuildOtherWorks />
       <div className={styles.quoteBox}>

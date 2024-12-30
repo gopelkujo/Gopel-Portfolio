@@ -61,6 +61,10 @@
   max-width: 80%;
 }
 
+/* 
+  Shimmer effect by: joshuapekera 
+  (https://codepen.io/joshuapekera/pen/xGjMMq) 
+ */
 .selectedWork {
   margin-left: 1rem;
   margin-bottom: 3rem;
@@ -68,8 +72,86 @@
   margin-top: 5rem;
   font-weight: 100;
   font-size: larger;
-  color: #909090;
   text-align: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: -moz-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: selectedWork;
+  -moz-animation-name: selectedWork;
+  animation-name: selectedWork;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+
+@-moz-keyframes selectedWork {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@-webkit-keyframes selectedWork {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@-o-keyframes selectedWork {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@keyframes selectedWork {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
 }
 
 .worksBox {
@@ -175,14 +257,22 @@
 .worksBoxImages img {
   margin-right: 1rem;
   border-radius: 15px;
-  width: 200px;
-  height: auto;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 
 .worksBoxImages img:hover {
   transform: scale(1.2);
+}
+
+.worksBoxWideImg {
+  height: 400px;
+  width: auto;
+}
+
+.worksBoxLongImg {
+  width: 200px;
+  height: auto;
 }
 
 /* width */
@@ -279,37 +369,6 @@
   flex-wrap: wrap;
 }
 
-.tools ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 0.8rem;
-}
-
-.tools ul li {
-  list-style: none;
-  border: 2px solid rgb(49, 115, 237);
-  border-radius: 10px;
-  padding: 4px 8px 4px 8px;
-  margin-right: 0.5rem;
-  font-size: 0.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(49, 115, 237);
-  transition: 0.3s;
-  cursor: default;
-}
-
-.tools ul li:hover {
-  background-color: rgb(49, 115, 237);
-  color: white;
-}
-
-/* /tools */
-.tools ul li::before {
-  display: none;
-}
-
 .quoteBox {
   margin-top: 2rem;
   padding: 1rem;
@@ -359,15 +418,51 @@
 .projectBox {
   margin-top: 1rem;
   width: 13rem;
-  height: 8rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid #b4b4b4;
-  padding: 1rem;
+  border: 1px solid #cacaca;
   position: relative;
   transition: 0.3s;
   cursor: pointer;
+  overflow: hidden;
+  row-gap: 0.3rem;
+  background-color: #ffffff;
+}
+
+.projectBox ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 !important;
+}
+
+.projectBox ul li {
+  padding: 0 !important;
+  margin: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  list-style: none;
+  border-radius: 10px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #cacaca;
+  transition: 0.3s;
+  cursor: default;
+  font-weight: normal;
+}
+
+/* /tools */
+.projectBox ul li::before {
+  display: none;
+}
+
+.projectBox img {
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #cacaca;
 }
 
 .projectBox:hover {
@@ -375,34 +470,24 @@
 }
 
 .projectBox h1 {
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 500;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #3d3d3d;
 }
 
 .projectBox p {
-  font-size: 0.7rem;
+  font-size: 14px;
   font-weight: 300;
   display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.projectBox div {
-  position: absolute;
-  bottom: 1rem;
-}
-
-.projectBox li {
-  padding: 0 !important;
-  margin-bottom: 0.2rem !important;
-  margin-right: 0.4rem !important;
-  color: #909090 !important;
-  font-weight: 300 !important;
-  border: none !important;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 @keyframes gradient {
