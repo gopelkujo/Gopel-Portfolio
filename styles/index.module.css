@@ -173,6 +173,11 @@
 }
 
 .worksBoxImages img {
+  margin-right: 1rem;
+  border-radius: 15px;
+  width: 200px;
+  height: auto;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 
@@ -200,14 +205,6 @@
 /* Handle on hover */
 .worksBoxImages::-webkit-scrollbar-thumb:hover {
   background: #cacaca;
-}
-
-.worksBoxImages img {
-  margin-right: 1rem;
-  border-radius: 15px;
-  width: 200px;
-  height: auto;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .experienceBox {
