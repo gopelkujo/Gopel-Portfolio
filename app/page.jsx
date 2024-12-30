@@ -165,6 +165,53 @@ export default function Home() {
     );
   }
 
+  function BuildOtherWorks() {
+    function BuildItem({ url, title, desc, stacks }) {
+      return (
+        <Link href={url}>
+          <div className={styles.projectBox}>
+            <h1>{title}</h1>
+            <p>{desc}</p>
+            <div className={styles.tools}>
+              <ul>
+                {stacks.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
+              </ul>
+            </div>
+          </div>
+        </Link>
+      );
+    }
+
+    return (
+      <div className={styles.experienceBox}>
+        <span className={styles.subTitle}>Other Project</span>
+        <br />
+        <div className={styles.projectContainer}>
+          <BuildItem
+            url="/sinbada"
+            title="SINBADA"
+            desc="Inventory system website based on ReactJS and Ruby."
+            stacks={["ReactJS", "MUI"]}
+          />
+          <BuildItem
+            url="/siinvent"
+            title="SIINVENT"
+            desc="Inventory system website based on ReactJS and ExpressJS."
+            stacks={["ReactJS", "MUI"]}
+          />
+          <BuildItem
+            url="#"
+            title="Goras Ludo Games"
+            desc="My team project at first year in collage. Goras Ludo Games is a board game that is similar to playing snakes and ladders."
+            stacks={["C"]}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.pageContainer}>
       <BuildHeader />
@@ -193,48 +240,7 @@ export default function Home() {
         techs={["React JS, MUI, Wordpress, Javascript"]}
         images={mpjImages}
       />
-      <div className={styles.experienceBox}>
-        <span className={styles.subTitle}>Project</span>
-        <br />
-        <div className={styles.projectContainer}>
-          <Link href="/multi-piranti-jaya">
-            <div className={styles.projectBox}>
-              <h1>Multi Piranti Jaya</h1>
-              <p>Company profile website based on ReactJS and Wordpress CMS.</p>
-              <div className={styles.tools}>
-                <ul>
-                  <li>ReactJS</li>
-                  <li>MUI</li>
-                </ul>
-              </div>
-            </div>
-          </Link>
-          <Link href="/sinbada">
-            <div className={styles.projectBox}>
-              <h1>SINBADA</h1>
-              <p>Inventory system website based on ReactJS and Ruby.</p>
-              <div className={styles.tools}>
-                <ul>
-                  <li>ReactJS</li>
-                  <li>MUI</li>
-                </ul>
-              </div>
-            </div>
-          </Link>
-          <Link href="/siinvent">
-            <div className={styles.projectBox}>
-              <h1>SIINVENT</h1>
-              <p>Inventory system website based on ReactJS and ExpressJS.</p>
-              <div className={styles.tools}>
-                <ul>
-                  <li>ReactJS</li>
-                  <li>MUI</li>
-                </ul>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
+      <BuildOtherWorks />
       <div className={styles.quoteBox}>
         <p>
           &quot;When you arise in the morning, think of what a precious

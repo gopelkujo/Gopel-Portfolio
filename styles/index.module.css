@@ -339,8 +339,9 @@
 .projectContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  column-gap: 1rem;
 }
 
 .projectContainer a {
@@ -375,6 +376,11 @@
 .projectBox p {
   font-size: 0.7rem;
   font-weight: 300;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .projectBox div {
