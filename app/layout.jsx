@@ -6,6 +6,7 @@ import githubIco from "../src/assets/images/github-ico.png";
 import xIco from "../src/assets/images/x-ico.png";
 import gmailIco from "../src/assets/images/gmail.png";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "gopelkujo",
@@ -13,66 +14,71 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const contacts = [
+    {
+      title: "Linked In",
+      icon: linkedinIco,
+      link: "https://www.linkedin.com/in/gopel-kujo/",
+    },
+    {
+      title: "Github",
+      icon: githubIco,
+      link: "https://github.com/gopelkujo/",
+    },
+    {
+      title: "Twitter",
+      icon: xIco,
+      link: "https://twitter.com/kujoowannabee",
+    },
+    {
+      title: "Gmail",
+      icon: gmailIco,
+      link: "mailto:mn.dwisatya@gmail.com",
+    },
+  ];
+
+  function BuildMenu() {
+    return (
+      <div className={styles.menuContainer}>
+        <div className={styles.menuContent}>
+          <Link href="/">
+            <h1>gopelkujo</h1>
+          </Link>
+          <Link
+            className={styles.menuResumeButton}
+            href="https://drive.google.com/file/d/1vvnZ_9ryFLeTnEPwUZXWXbHpakjNcXAF/view?usp=sharing"
+            target="_blank"
+          >
+            Resume
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  function BuildContacts() {
+    return (
+      <div className={styles.footerContacts}>
+        {contacts.map((item, index) => {
+          return (
+            <a key={index} href={item.link} target="_blank">
+              <Image src={item.icon} alt={item.title} height={25} width={25} />
+            </a>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <html lang="en">
       <body>
         <div className={styles.baseLayout}>
-          <div className={styles.menuContainer}>
-            <div className={styles.menuContent}>
-              <Link href="/">
-                <h1>gopelkujo</h1>
-              </Link>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/gopel-kujo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={linkedinIco.src} alt="Linked In" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/gopelkujo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={githubIco.src} alt="Github" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/kujoowannabee"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={xIco.src} alt="X" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:mn.dwisatya@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={gmailIco.src} alt="gmail" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <BuildMenu />
           {children}
           <span className={styles.footer}>
-            Built in Next JS and deploy on Vercel, with ❤ Take a tour of this
-            project on{" "}
-            <a
-              href="https://github.com/gopelkujo/gopelkujo.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
+            <p>Built in Next JS and pure css. Deploy on Vercel. Made with ❤</p>
+            <BuildContacts />
           </span>
         </div>
       </body>
