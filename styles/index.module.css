@@ -154,7 +154,7 @@
   }
 }
 
-.worksBox {
+.selectedWorkBox {
   padding: 0 1rem 0 1rem;
   margin-bottom: 3rem;
   display: flex;
@@ -163,7 +163,7 @@
   align-items: flex-start;
 }
 
-.worksBoxtitle {
+.selectedWorkBoxtitle {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -171,7 +171,7 @@
   align-items: center;
 }
 
-.worksBoxIcon {
+.selectedWorkBoxIcon {
   width: 50px;
   height: 50px;
   margin-right: 0.5rem;
@@ -180,7 +180,7 @@
   background-color: white;
 }
 
-.worksBoxtitleDesc {
+.selectedWorkBoxtitleDesc {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -190,23 +190,23 @@
   box-sizing: border-box;
 }
 
-.worksBoxtitleDesc h1 {
+.selectedWorkBoxtitleDesc h1 {
   font-size: larger;
   font-weight: 500;
 }
 
-.worksBoxtitleDesc p {
+.selectedWorkBoxtitleDesc p {
   margin-top: 0.2rem;
   font-size: medium;
 }
 
-.worksBoxtitleDesc h2 {
+.selectedWorkBoxtitleDesc h2 {
   margin-top: 0.2rem;
   font-size: medium;
   font-weight: normal;
 }
 
-.worksBoxStore {
+.selectedWorkBoxStore {
   min-width: 220px;
   display: flex;
   flex-direction: row;
@@ -215,17 +215,17 @@
   flex-grow: 1;
 }
 
-.worksBoxStore img {
+.selectedWorkBoxStore img {
   min-width: 100px;
   height: 34px;
   transition: 0.2s;
 }
 
-.worksBoxStore img:hover {
+.selectedWorkBoxStore img:hover {
   opacity: 0.5;
 }
 
-.worksBoxTech {
+.selectedWorkBoxTech {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -234,7 +234,7 @@
   margin-bottom: 0.5rem;
 }
 
-.worksBoxTech ul li {
+.selectedWorkBoxTech ul li {
   display: inline-block;
   list-style-type: none;
   margin-right: -4px;
@@ -244,7 +244,7 @@
   color: #9c9c9c;
 }
 
-.worksBoxImages {
+.selectedWorkBoxImages {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -254,50 +254,50 @@
   padding-bottom: 0.5rem;
 }
 
-.worksBoxImages img {
+.selectedWorkBoxImages img {
   margin-right: 1rem;
   border-radius: 15px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 
-.worksBoxImages img:hover {
+.selectedWorkBoxImages img:hover {
   transform: scale(1.2);
 }
 
-.worksBoxWideImg {
+.selectedWorkBoxWideImg {
   height: 400px;
   width: auto;
 }
 
-.worksBoxLongImg {
+.selectedWorkBoxLongImg {
   width: 200px;
   height: auto;
 }
 
 /* width */
-.worksBoxImages::-webkit-scrollbar {
+.selectedWorkBoxImages::-webkit-scrollbar {
   width: 20px;
   height: 10px;
 }
 
 /* Track */
-.worksBoxImages::-webkit-scrollbar-track {
+.selectedWorkBoxImages::-webkit-scrollbar-track {
   background: transparent;
 }
 
 /* Handle */
-.worksBoxImages::-webkit-scrollbar-thumb {
+.selectedWorkBoxImages::-webkit-scrollbar-thumb {
   background: #e2e2e2;
   border-radius: 5px;
 }
 
 /* Handle on hover */
-.worksBoxImages::-webkit-scrollbar-thumb:hover {
+.selectedWorkBoxImages::-webkit-scrollbar-thumb:hover {
   background: #cacaca;
 }
 
-.experienceBox {
+.otherProjectBox {
   width: 100%;
   padding: 0 1rem 0 1rem;
 }
@@ -326,11 +326,11 @@
   font-size: 1rem;
 }
 
-.experienceBox ul {
+.otherProjectBox ul {
   margin-top: 1rem;
 }
 
-.experienceBox ul li {
+.otherProjectBox ul li {
   position: relative;
   margin-bottom: 1rem;
   font-size: 0.8rem;
@@ -340,7 +340,7 @@
   text-indent: -0rem;
 }
 
-.experienceBox ul li:before {
+.otherProjectBox ul li:before {
   content: ">";
   position: absolute;
   left: 0;
@@ -348,14 +348,14 @@
   color: blue;
 }
 
-.experienceBox ul li h1 {
+.otherProjectBox ul li h1 {
   font-size: 0.8rem;
   font-weight: 500;
   margin-right: 0.5rem;
   display: inline;
 }
 
-.experienceBox ul li h2 {
+.otherProjectBox ul li h2 {
   display: inline;
   font-weight: normal;
   color: grey;
@@ -586,7 +586,7 @@
   }
 }
 
-/* Medium */
+/* SMALL */
 @media only screen and (max-width: 600px) {
   .greetContainer {
     flex-wrap: wrap-reverse;

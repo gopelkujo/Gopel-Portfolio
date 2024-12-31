@@ -170,11 +170,11 @@ export default function Home() {
     isImageWide = false,
   }) {
     return (
-      <div className={styles.worksBox}>
-        <div className={styles.worksBoxtitle}>
-          <Image src={icon} alt="logo" className={styles.worksBoxIcon} />
+      <div className={styles.selectedWorkBox}>
+        <div className={styles.selectedWorkBoxtitle}>
+          <Image src={icon} alt="logo" className={styles.selectedWorkBoxIcon} />
 
-          <div className={styles.worksBoxtitleDesc}>
+          <div className={styles.selectedWorkBoxtitleDesc}>
             <h1>{title}</h1>
             <h2>{description}</h2>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
           {appstoreLink == null &&
           playstoreLink == null &&
           websiteLink == null ? null : (
-            <div className={styles.worksBoxStore}>
+            <div className={styles.selectedWorkBoxStore}>
               {appstoreLink ? (
                 <Link
                   href={appstoreLink}
@@ -221,7 +221,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className={styles.worksBoxTech}>
+        <div className={styles.selectedWorkBoxTech}>
           <ul>
             {techs.map((item, index) => {
               return <li key={index}>{item}</li>;
@@ -229,7 +229,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className={styles.worksBoxImages}>
+        <div className={styles.selectedWorkBoxImages}>
           {images.map((item, index) => {
             return (
               <Image
@@ -237,7 +237,9 @@ export default function Home() {
                 src={item.img}
                 alt={item.alt}
                 className={
-                  isImageWide ? styles.worksBoxWideImg : styles.worksBoxLongImg
+                  isImageWide
+                    ? styles.selectedWorkBoxWideImg
+                    : styles.selectedWorkBoxLongImg
                 }
               />
             );
@@ -266,7 +268,7 @@ export default function Home() {
     }
 
     return (
-      <div className={styles.experienceBox}>
+      <div className={styles.otherProjectBox}>
         <span className={styles.subTitle}>Other Project</span>
         <br />
         <div className={styles.projectContainer}>
@@ -343,7 +345,7 @@ export default function Home() {
                 <Image
                   src={item.icon}
                   alt={item.title + " logo"}
-                  className={styles.worksBoxIcon}
+                  className={styles.selectedWorkBoxIcon}
                 />
                 <div className={styles.contributionTitle}>
                   <Link href={item.link} target="_blank">
