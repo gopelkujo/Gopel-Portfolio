@@ -11,7 +11,6 @@
 .greetContainer {
   margin: auto;
   margin-top: 4rem;
-  margin-bottom: 4rem;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -195,15 +194,10 @@
   font-weight: 500;
 }
 
-.selectedWorkBoxtitleDesc p {
-  margin-top: 0.2rem;
-  font-size: medium;
-}
-
 .selectedWorkBoxtitleDesc h2 {
   margin-top: 0.2rem;
   font-size: medium;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .selectedWorkBoxStore {
@@ -218,11 +212,23 @@
 .selectedWorkBoxStore img {
   min-width: 100px;
   height: 34px;
+  width: 100px;
   transition: 0.2s;
 }
 
 .selectedWorkBoxStore img:hover {
   opacity: 0.5;
+}
+
+.selectedWorkBoxStoreMobile {
+  display: none;
+}
+
+.selectedWorkBoxStoreMobile img {
+  min-width: 100px;
+  height: 34px;
+  width: 100px;
+  transition: 0.2s;
 }
 
 .selectedWorkBoxTech {
@@ -238,7 +244,8 @@
   display: inline-block;
   list-style-type: none;
   margin-right: -4px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: medium;
   font-weight: 300;
   color: #9c9c9c;
@@ -257,7 +264,7 @@
 .selectedWorkBoxImages img {
   margin-right: 1rem;
   border-radius: 15px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.03);
   transition: 0.2s;
 }
 
@@ -587,7 +594,7 @@
 }
 
 /* SMALL */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   .greetContainer {
     flex-wrap: wrap-reverse;
     justify-content: stretch;
@@ -636,5 +643,77 @@
   .quoteBox footer {
     font-size: 0.8rem;
     font-weight: 500;
+  }
+
+  .selectedWork {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .selectedWorkBox {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .selectedWorkBoxtitleDesc h1 {
+    font-size: 14px;
+  }
+
+  .selectedWorkBoxtitleDesc h2 {
+    font-size: 14px;
+  }
+
+  .selectedWorkBoxStore {
+    display: none;
+  }
+
+  .selectedWorkBoxStoreMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .selectedWorkBoxTech {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .selectedWorkBoxTech ul li {
+    font-size: small;
+  }
+
+  .selectedWorkBoxtitle {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .selectedWorkBoxWideImg {
+    height: 250px;
+    width: auto;
+  }
+
+  .selectedWorkBoxLongImg {
+    width: 150px;
+    height: auto;
+  }
+
+  .selectedWorkBoxImages img:first-child {
+    margin-left: 1rem;
+  }
+
+  /* width */
+  .selectedWorkBoxImages::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Track */
+  .selectedWorkBoxImages::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  /* Handle */
+  .selectedWorkBoxImages::-webkit-scrollbar-thumb {
+    display: none;
   }
 }

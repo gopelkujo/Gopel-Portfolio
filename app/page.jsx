@@ -138,7 +138,7 @@ export default function Home() {
 
     return (
       <div className={styles.pageContainer}>
-        <div className={styles.selectedWork}>Selected Work</div>
+        <div className={styles.selectedWork}>Some of My Selected Works</div>
 
         {selectedWorks.map((item, index) => {
           return (
@@ -194,8 +194,8 @@ export default function Home() {
                   <Image
                     src={AppStoreBadge}
                     alt="Google Play Store Icon"
-                    width={100}
-                    height={500}
+                    width="auto"
+                    height="auto"
                   />
                 </Link>
               ) : null}
@@ -221,6 +221,43 @@ export default function Home() {
               ) : null}
             </div>
           )}
+        </div>
+
+        <div className={styles.selectedWorkBoxStoreMobile}>
+          {appstoreLink ? (
+            <Link
+              href={appstoreLink}
+              target="_blank"
+              style={{ marginRight: "0.5rem" }}
+            >
+              <Image
+                src={AppStoreBadge}
+                alt="Google Play Store Icon"
+                width="auto"
+                height="auto"
+              />
+            </Link>
+          ) : null}
+          {playstoreLink != null ? (
+            <Link href={playstoreLink} target="_blank">
+              <Image
+                src={GooglePlayBadge}
+                alt="Google Play Store Icon"
+                width={115}
+                height={100}
+                loading="lazy"
+              />
+            </Link>
+          ) : null}
+          {websiteLink != null ? (
+            <Link
+              href={websiteLink}
+              target="_blank"
+              className={styles.visitWebsiteBox}
+            >
+              Visit Website
+            </Link>
+          ) : null}
         </div>
 
         <div className={styles.selectedWorkBoxTech}>
