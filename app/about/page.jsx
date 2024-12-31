@@ -3,7 +3,10 @@ import styles from "../../styles/index.module.css";
 export default function AboutPage() {
   return (
     <div>
-      <h1>About</h1>
+      <center>
+        <h1 style={{margin: 'auto', marginTop: "5rem", marginBottom: "5rem"}}>Under Construction</h1>
+      </center>
+      {/* <h1>About</h1>
 
       <div className={styles.experienceBox}>
         <span className={styles.subTitle}>Education</span>
@@ -56,7 +59,7 @@ export default function AboutPage() {
             </div>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }
