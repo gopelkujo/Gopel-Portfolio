@@ -289,6 +289,30 @@ export default function Home() {
   }
 
   function BuildOtherWorks() {
+    const otherWorksData = [
+      {
+        img: { url: Sinbada, alt: "test" },
+        url: "https://github.com/SekelompokOrangKuat/PROJECTCUAN/tree/frontend",
+        title: "SINBADA",
+        desc: "Inventory system website based on ReactJS and Ruby.",
+        stacks: ["ReactJS", "MUI", "Javascript"],
+      },
+      {
+        img: { url: Siinvent, alt: "test" },
+        url: "https://github.com/SekelompokOrangKuat/ProjectInventaris/tree/dev",
+        title: "SIINVENT",
+        desc: "Inventory system website based on ReactJS and ExpressJS.",
+        stacks: ["ReactJS", "MUI", "Javascript"],
+      },
+      {
+        img: { url: Goras, alt: "test" },
+        url: "https://github.com/gopelkujo/gorasproject",
+        title: "Goras Ludo Games",
+        desc: "My team project at first year in collage. Goras Ludo Games is a board game that is similar to playing snakes and ladders.",
+        stacks: ["C"],
+      },
+    ];
+
     function BuildItem({ img, url, title, desc, stacks }) {
       return (
         <Link href={url} target="_blank">
@@ -311,27 +335,18 @@ export default function Home() {
         <span className={styles.subTitle}>Other Project</span>
         <br />
         <div className={styles.projectContainer}>
-          <BuildItem
-            img={{ url: Sinbada, alt: "test" }}
-            url="https://github.com/SekelompokOrangKuat/PROJECTCUAN/tree/frontend"
-            title="SINBADA"
-            desc="Inventory system website based on ReactJS and Ruby."
-            stacks={["ReactJS", "MUI", "Javascript"]}
-          />
-          <BuildItem
-            img={{ url: Siinvent, alt: "test" }}
-            url="https://github.com/SekelompokOrangKuat/ProjectInventaris/tree/dev"
-            title="SIINVENT"
-            desc="Inventory system website based on ReactJS and ExpressJS."
-            stacks={["ReactJS", "MUI", "Javascript"]}
-          />
-          <BuildItem
-            img={{ url: Goras, alt: "test" }}
-            url="https://github.com/gopelkujo/gorasproject"
-            title="Goras Ludo Games"
-            desc="My team project at first year in collage. Goras Ludo Games is a board game that is similar to playing snakes and ladders."
-            stacks={["C"]}
-          />
+          {otherWorksData.map((item, index) => {
+            return (
+              <BuildItem
+                key={index}
+                img={item.img}
+                url={item.url}
+                title={item.title}
+                desc={item.desc}
+                stacks={item.stacks}
+              />
+            );
+          })}
         </div>
       </div>
     );
