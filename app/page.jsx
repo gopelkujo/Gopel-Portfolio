@@ -146,6 +146,8 @@ export default function Home() {
               key={index}
               icon={item.icon}
               title={item.title}
+              appstoreLink={item.appstoreLink}
+              playstoreLink={item.playstoreLink}
               description={item.description}
               websiteLink={item.websiteLink}
               techs={item.techs}
