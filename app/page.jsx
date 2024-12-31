@@ -45,6 +45,12 @@ import Siinvent from "../src/assets/images/siinvent/1.png";
 // Import GORAS images
 import Goras from "../src/assets/images/goras/goras_main.png";
 
+// Import Github images
+import GithubIcon from "../src/assets/images/github.svg";
+
+// Import Stackoverflow images
+import StackoverflowIcon from "../src/assets/images/stackoverflow.png";
+
 export default function Home() {
   const greetingText = "Hello, nice to meet you. I am Gopel!";
 
@@ -99,7 +105,60 @@ export default function Home() {
     );
   }
 
-  function BuildWorks({
+  function BuildSelectedWork() {
+    const selectedWorks = [
+      {
+        icon: PPlusIcon,
+        title: "Periplus",
+        description: "Periplus online bookstore, 10k+ total downloads.",
+        appstoreLink: "https://apps.apple.com/id/app/periplus/id6444208499",
+        playstoreLink:
+          "https://play.google.com/store/apps/details?id=com.bookindo.periplus.periplus&hl=en",
+        techs: ["Figma, Flutter, Firebase, Midtrans"],
+        images: pplusImages,
+      },
+      {
+        icon: PhcIcon,
+        title: "Periplus Human Capital",
+        description:
+          "An application for employee management, mainly for employee attendance. Published privately on App Store and Play Store.",
+        techs: ["Figma, Flutter, Firebase, Geolocation"],
+        images: phcImages,
+      },
+      {
+        icon: MpjIcon,
+        title: "Multi Piranti Jaya",
+        description: "Profile company website of Multi Piranti Jaya.",
+        websiteLink: "https://multipirantijaya.com/",
+        techs: ["React JS, MUI, Wordpress, Javascript"],
+        images: mpjImages,
+        isImageWide: true,
+      },
+    ];
+
+    return (
+      <div className={styles.pageContainer}>
+        <div className={styles.selectedWork}>Selected Work</div>
+
+        {selectedWorks.map((item, index) => {
+          return (
+            <BuildWork
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              websiteLink={item.websiteLink}
+              techs={item.techs}
+              images={item.images}
+              isImageWide={item.isImageWide ?? false}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
+  function BuildWork({
     icon,
     title,
     description,
@@ -114,10 +173,12 @@ export default function Home() {
       <div className={styles.worksBox}>
         <div className={styles.worksBoxtitle}>
           <Image src={icon} alt="logo" className={styles.worksBoxIcon} />
+
           <div className={styles.worksBoxtitleDesc}>
             <h1>{title}</h1>
             <h2>{description}</h2>
           </div>
+
           {appstoreLink == null &&
           playstoreLink == null &&
           websiteLink == null ? null : (
@@ -159,6 +220,7 @@ export default function Home() {
             </div>
           )}
         </div>
+
         <div className={styles.worksBoxTech}>
           <ul>
             {techs.map((item, index) => {
@@ -166,6 +228,7 @@ export default function Home() {
             })}
           </ul>
         </div>
+
         <div className={styles.worksBoxImages}>
           {images.map((item, index) => {
             return (
@@ -233,41 +296,81 @@ export default function Home() {
     );
   }
 
-  function BuildSelectedWork() {
-    return <div className={styles.selectedWork}>Selected Work</div>;
+  function BuildContributions() {
+    const contributionDataList = [
+      {
+        title: "Stackoverflow",
+        desc: "Stack Overflow is best known for its public Q&A platform, which attracts millions of visitors every month who come to ask questions, learn, and share technical knowledge.",
+        link: "https://stackoverflow.com/users/12566347/gopelkujo",
+        icon: StackoverflowIcon,
+        data: [
+          {
+            title: "More than 700++ reputation",
+            desc: "Actively answers for questions on stackoverflow. And due to over 500 reputaion, i have side quest that review other use question/answer for give some feedback, such as what question/answer that can be improved or if the question/answer not easly can be understood by other user i can give a feedback that how the question/answer can be more easly understood by other.",
+          },
+          {
+            title: "50+ Answer and question",
+            desc: "Most answer and question are in flutter section, but does not close for other parts of discussion.",
+          },
+        ],
+      },
+      {
+        title: "Github",
+        desc: "GitHub is a proprietary developer platform that allows developers to create, store, manage, and share their code. It uses Git to provide distributed version control. It is commonly used to host open source software development projects.",
+        link: "https://github.com/gopelkujo",
+        icon: GithubIcon,
+        data: [
+          {
+            title: "Open issue on open source project",
+            desc: "Most project that i had openned the issue are open source project that i used in my project. If the project that i had opened an issue doesn't mantained anymore, and my project needed so much, then i fork the repo and fix it by myself for my project.",
+          },
+          {
+            title: "Contribute on open source project",
+            desc: "I contributed to some open source project that related with my expertise as a frontend developer such as npm package (npmjs.com) and flutter package (pub.dev).",
+          },
+        ],
+      },
+    ];
+
+    return (
+      <div className={styles.contributionsWork}>
+        <span className={styles.subTitle}>Contribution</span>
+
+        {contributionDataList.map((item, itemIndex) => {
+          return (
+            <div key={itemIndex} className={styles.contribution}>
+              <div className={styles.contributionHeader}>
+                <Image
+                  src={item.icon}
+                  alt={item.title + " logo"}
+                  className={styles.worksBoxIcon}
+                />
+                <div className={styles.contributionTitle}>
+                  <Link href={item.link} target="_blank">
+                    {item.title}
+                  </Link>
+                  <h2>{item.desc}</h2>
+                </div>
+              </div>
+              <ul>
+                {item.data.map((data, dataIndex) => {
+                  return (
+                    <li key={dataIndex}>
+                      <a href="#">{data.title}</a>
+                      <p>{data.desc}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 
-  return (
-    <div className={styles.pageContainer}>
-      <BuildHeader />
-      <BuildSelectedWork />
-      <BuildWorks
-        icon={PPlusIcon}
-        title="Periplus"
-        description="Periplus online bookstore, 10k+ total downloads."
-        appstoreLink="https://apps.apple.com/id/app/periplus/id6444208499"
-        playstoreLink="https://play.google.com/store/apps/details?id=com.bookindo.periplus.periplus&hl=en"
-        techs={["Figma, Flutter, Firebase, Midtrans"]}
-        images={pplusImages}
-      />
-      <BuildWorks
-        icon={PhcIcon}
-        title="Periplus Human Capital"
-        description="An application for employee management, mainly for employee
-              attendance. Published privately on App Store and Play Store."
-        techs={["Figma, Flutter, Firebase, Geolocation"]}
-        images={phcImages}
-      />
-      <BuildWorks
-        icon={MpjIcon}
-        title="Multi Piranti Jaya"
-        description="Profile company website of Multi Piranti Jaya."
-        websiteLink="https://multipirantijaya.com/"
-        techs={["React JS, MUI, Wordpress, Javascript"]}
-        images={mpjImages}
-        isImageWide={true}
-      />
-      <BuildOtherWorks />
+  function BuildQuote() {
+    return (
       <div className={styles.quoteBox}>
         <p>
           &quot;When you arise in the morning, think of what a precious
@@ -276,6 +379,16 @@ export default function Home() {
         </p>
         <footer>— Aurelius, Marcus</footer>
       </div>
+    );
+  }
+
+  return (
+    <div className={styles.pageContainer}>
+      <BuildHeader />
+      <BuildSelectedWork />
+      <BuildOtherWorks />
+      <BuildContributions />
+      <BuildQuote />
     </div>
   );
 }
