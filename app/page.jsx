@@ -52,7 +52,7 @@ import GithubIcon from "../src/assets/images/github.svg";
 import StackoverflowIcon from "../src/assets/images/stackoverflow.png";
 
 export const metadata = {
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: false },
   title: "gopelkujo",
   description: "my professional journey.",
   verification: {
